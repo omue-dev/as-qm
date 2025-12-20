@@ -1,0 +1,74 @@
+@use '../abstracts' as *;
+
+.page-ueber-mich .career-timeline {
+  position: relative;
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1.4rem;
+  padding-left: 2.5rem;
+}
+
+.page-ueber-mich .career-timeline::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 2px;
+  background: linear-gradient(to bottom, rgba(79, 182, 255, 0.7), rgba(78, 114, 255, 0.2));
+}
+
+.page-ueber-mich .career-timeline__item {
+  position: relative;
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  @include card($radius: radius('xl'), $shadow: shadow('card'));
+}
+
+.page-ueber-mich .career-timeline__item h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.page-ueber-mich .career-timeline__item p {
+  margin: 0;
+  color: var(--ink-400);
+}
+
+.page-ueber-mich .career-timeline__year {
+  position: absolute;
+  left: -6.75rem;
+  top: 1.05rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink-500);
+}
+
+.page-ueber-mich .career-timeline__dot {
+  position: absolute;
+  left: -2.1rem;
+  top: 1.2rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6ed1ff, #4e72ff);
+  box-shadow: shadow('icon');
+  border: 3px solid #ffffff;
+}
+
+@include respond-to('hero') {
+  .page-ueber-mich .career-timeline {
+    padding-left: 2rem;
+  }
+
+  .page-ueber-mich .career-timeline__dot {
+    left: -1.7rem;
+  }
+
+  .page-ueber-mich .career-timeline__year {
+    position: static;
+    margin-bottom: -0.25rem;
+    color: var(--ink-400);
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "as-qm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "dev": "concurrently \"sass --watch wireframe/sass/main.scss:wireframe/css/main.css\" \"live-server wireframe --wait=200\"",
+    "build": "sass wireframe/sass/main.scss wireframe/css/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "live-server": "^1.2.2",
+    "sass": "^1.97.1"
+  }
+}

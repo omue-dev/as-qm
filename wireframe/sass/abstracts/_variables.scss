@@ -1,0 +1,102 @@
+$max-width: 1140px;
+
+$font-stack: (
+  'Plus Jakarta Sans',
+  'Segoe UI',
+  'Helvetica Neue',
+  Arial,
+  sans-serif,
+);
+
+$space: (
+  '0': 0,
+  'xs': 0.25rem,
+  'sm': 0.5rem,
+  'md': 0.75rem,
+  'lg': 1rem,
+  'xl': 1.5rem,
+  '2xl': 2rem,
+  '3xl': 3rem,
+);
+
+$colors: (
+  'white': hsl(0, 0%, 100%),
+  'tooltip': hsl(261, 100%, 65%),
+  'tooltip-shadow': hsla(261, 100%, 65%, 0.35),
+  'ink-900': hsl(223, 50%, 9%),
+);
+
+$breakpoints: (
+  'lg': 900px,
+  'md': 768px,
+  'hero': 700px,
+  'sm': 520px,
+);
+
+$radii: (
+  'xs': 8px,
+  'sm': 10px,
+  'md': 12px,
+  'lg': 14px,
+  'xl': 16px,
+  '2xl': 18px,
+  '3xl': 20px,
+  'service': 22px,
+  'hero': 24px,
+  'pill': 999px,
+);
+
+$shadows: (
+  'soft': 0 12px 28px rgba(15, 23, 42, 0.16),
+  'card': 0 16px 30px rgba(15, 23, 42, 0.08),
+  'panel': 0 18px 36px rgba(15, 23, 42, 0.08),
+  'hero': 0 30px 60px rgba(12, 18, 36, 0.45),
+  'cta': 0 18px 36px rgba(78, 114, 255, 0.35),
+  'nav': 0 18px 40px rgba(6, 12, 30, 0.45),
+  'dropdown': 0 20px 40px rgba(8, 16, 36, 0.35),
+  'brand': 0 8px 18px rgba(79, 123, 255, 0.45),
+  'pill': 0 10px 24px rgba(15, 23, 42, 0.3),
+  'icon': 0 6px 14px rgba(78, 114, 255, 0.35),
+  'dot': 0 10px 20px rgba(79, 123, 255, 0.2),
+);
+
+$gradients: (
+  'header': linear-gradient(
+    90deg,
+    rgba(56, 118, 214, 0.95),
+    rgba(22, 54, 122, 0.96) 42%,
+    rgba(10, 20, 42, 0.98)
+  ),
+  'hero-spot-a': radial-gradient(
+    circle at 10% 20%,
+    rgba(79, 182, 255, 0.45),
+    transparent 55%
+  ),
+  'hero-spot-b': radial-gradient(
+    circle at 60% 0%,
+    rgba(83, 118, 255, 0.4),
+    transparent 60%
+  ),
+  'hero-linear': linear-gradient(135deg, #0b1224, #101a33 48%, #0f1b3a),
+  'hero-overlay': radial-gradient(
+    circle at 80% 30%,
+    rgba(110, 209, 255, 0.18),
+    transparent 50%
+  ),
+  'portrait': linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.02)
+  ),
+  'services': linear-gradient(
+    135deg,
+    rgba(78, 114, 255, 0.18),
+    rgba(94, 199, 255, 0.08)
+  ),
+  'cta-panel': linear-gradient(
+    135deg,
+    rgba(79, 182, 255, 0.12),
+    rgba(78, 114, 255, 0.1)
+  ),
+  'button': linear-gradient(135deg, #4e72ff, #5ec7ff),
+);

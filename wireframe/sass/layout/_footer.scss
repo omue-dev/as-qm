@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+.footer {
+  background: #ffffff;
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+}
+
+.footer__inner {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--ink-400);
+  font-size: 0.95rem;
+}
+
+.footer .nav__link {
+  color: var(--ink-400);
+  border-color: transparent;
+  background: transparent;
+  opacity: 1;
+  font-size: 0.95rem;
+}
+
+.footer .nav__link:hover,
+.footer .nav__link:focus-visible {
+  color: var(--ink-900);
+  background: #f2f6ff;
+  border-color: transparent;
+}
+
+@include respond-to('md') {
+  .footer__inner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

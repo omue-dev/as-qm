@@ -1,0 +1,55 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+@function radius($key) {
+  @return map.get($radii, $key);
+}
+
+@function space($key) {
+  @return map.get($space, $key);
+}
+
+@function color($key) {
+  @return map.get($colors, $key);
+}
+
+@function shadow($key) {
+  @return map.get($shadows, $key);
+}
+
+@function gradient($key) {
+  @return map.get($gradients, $key);
+}
+
+@function breakpoint($key) {
+  @return map.get($breakpoints, $key);
+}
+
+@mixin respond-to($key) {
+  $size: breakpoint($key);
+
+  @if $size {
+    @media (max-width: $size) {
+      @content;
+    }
+  } @else {
+    @error 'Kein Breakpoint `#{$key}` in $breakpoints definiert.';
+  }
+}
+
+@mixin card(
+  $radius: radius('lg'),
+  $shadow: shadow('card'),
+  $bg: color('white'),
+  $border: var(--line)
+) {
+  border: 1px solid $border;
+  border-radius: $radius;
+  background: $bg;
+  box-shadow: $shadow;
+}
+
+@mixin glass($bg: rgba(255, 255, 255, 0.08)) {
+  background: $bg;
+  backdrop-filter: blur(12px);
+}

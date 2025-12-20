@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+.abbr-tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 space('xs');
+  border-radius: radius('xs');
+  cursor: help;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(47, 92, 255, 0.5);
+}
+
+.abbr-tooltip::after,
+.abbr-tooltip::before {
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -8px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.abbr-tooltip::after {
+  content: attr(data-title);
+  bottom: calc(100% + 12px);
+  background: color('tooltip');
+  color: color('white');
+  padding: space('sm') space('md');
+  border-radius: radius('sm');
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 14px 30px color('tooltip-shadow');
+}
+
+.abbr-tooltip::before {
+  content: '';
+  bottom: calc(100% + 6px);
+  border-width: 6px 6px 0 6px;
+  border-style: solid;
+  border-color: color('tooltip') transparent transparent transparent;
+}
+
+.abbr-tooltip:hover::after,
+.abbr-tooltip:hover::before,
+.abbr-tooltip:focus-visible::after,
+.abbr-tooltip:focus-visible::before {
+  opacity: 1;
+  transform: translate(-50%, -12px);
+}
