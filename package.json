@@ -6,8 +6,11 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "concurrently \"sass --watch wireframe/sass/main.scss:wireframe/css/main.css\" \"live-server wireframe --wait=200\"",
+    "dev": "concurrently \"sass --watch wireframe/sass/main.scss:wireframe/css/main.css\" \"http-server wireframe -c-1\"",
+    "dev:site": "concurrently \"sass --watch src/assets/scss/main.scss:dist/assets/css/main.css\" \"node scripts/sync-site.js\" \"node scripts/dev-site.js\"",
+    "serve:site": "http-server dist -c-1",
     "build": "sass wireframe/sass/main.scss wireframe/css/main.css",
+    "build:site": "sass src/assets/scss/main.scss dist/assets/css/main.css && mkdir -p dist/assets/webfonts && cp -r node_modules/@fortawesome/fontawesome-free/webfonts/* dist/assets/webfonts/ && mkdir -p dist/assets/img && cp -r src/assets/img/* dist/assets/img/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,8 +18,10 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "bootstrap": "^5.3.3",
     "concurrently": "^9.2.1",
-    "live-server": "^1.2.2",
-    "sass": "^1.97.1"
+    "http-server": "^14.1.1",
+    "sass": "^1.62.1"
   }
 }

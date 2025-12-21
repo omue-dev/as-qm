@@ -1,0 +1,25 @@
+<svg width="70" height="120" viewBox="0 0 70 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- A -->
+  <g transform="translate(15, 10)">
+    <path d="M20 0L30 25L10 25L20 0Z" fill="none" stroke="#7FB545" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="15" y1="18" x2="25" y2="18" stroke="#7FB545" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- & symbol -->
+  <g transform="translate(12, 40)">
+    <path d="M25 5C25 5 20 0 15 5C12 8 13 12 18 15C23 18 28 20 28 25C28 30 23 33 18 30" fill="none" stroke="#7FB545" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- S -->
+  <g transform="translate(10, 65)">
+    <path d="M10 5C10 5 5 0 10 -3C15 -6 25 -4 28 2C31 8 30 12 25 15C20 18 12 17 8 22C4 27 5 32 10 34C15 36 22 32 25 28" fill="none" stroke="#7FB545" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Blue accent dots -->
+  <circle cx="52" cy="25" r="4" fill="#4FACFE"/>
+  <circle cx="52" cy="58" r="4" fill="#4FACFE"/>
+
+  <!-- Text labels -->
+  <text x="35" y="103" font-family="Arial, sans-serif" font-size="10" fill="#E8EEF7" text-anchor="middle" font-weight="600">QM</text>
+  <text x="35" y="113" font-family="Arial, sans-serif" font-size="7" fill="#B8C5D9" text-anchor="middle" font-weight="500">Beratung</text>
+</svg>

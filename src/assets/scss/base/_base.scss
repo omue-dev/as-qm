@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $body-bg;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,23 @@
+// Bootstrap overrides must be defined before importing Bootstrap.
+@use "sass:map";
+@use "../abstracts" as *;
+
+$theme-colors: map.merge($theme-colors, (
+  "brand": $color-primary-600
+));
+
+$input-border-radius: 0.75rem;
+$input-padding-y: 0.65rem;
+$input-padding-x: 0.9rem;
+
+$navbar-toggler-padding-y: 0.5rem;
+$navbar-toggler-padding-x: 0.75rem;
+$navbar-toggler-border-radius: 999px;
+
+$badge-padding-y: 0.4rem;
+$badge-padding-x: 0.75rem;
+$badge-font-weight: 600;
+
+$btn-border-radius: 999px;
+
+@use "../../../../node_modules/bootstrap/scss/bootstrap";

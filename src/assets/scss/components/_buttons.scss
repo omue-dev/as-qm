@@ -1,0 +1,10 @@
+@use "../abstracts" as *;
+
+.btn-hero {
+  @include shadow(0 12px 30px rgba(15, 45, 120, 0.35));
+}
+
+.btn-outline-light {
+  @include color(color, "text-on-dark");
+  border-color: rgba(255, 255, 255, 0.35);
+}

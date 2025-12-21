@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.section-spacing {
+  padding: 4rem 0;
+}
+
+.section-light {
+  @include color(background-color, "white");
+}
+
+.section-soft {
+  background-color: #f0f4ff;
+}

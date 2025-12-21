@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+// Utility helpers aligned with the design rhythm.
+.text-muted-strong {
+  @include color(color, "muted");
+}
+
+.bg-glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}

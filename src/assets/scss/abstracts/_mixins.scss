@@ -1,0 +1,58 @@
+@use "sass:map";
+@use "./variables" as *;
+@use "./functions" as fn;
+
+// Fluid type helper for hero headline and section titles.
+@mixin fluid-type($min-size, $max-size, $min-vw: 320, $max-vw: 1200) {
+  font-size: $min-size;
+  @media (min-width: #{$min-vw}px) {
+    font-size: calc(#{$min-size} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-vw}px) / (#{$max-vw} - #{$min-vw})));
+  }
+  @media (min-width: #{$max-vw}px) {
+    font-size: $max-size;
+  }
+}
+
+// Tokenized color usage for consistent theming.
+@mixin color($property, $key) {
+  #{$property}: fn.color-token($key);
+}
+
+// Font sizing helper with optional line-height and weight.
+@mixin font-size($size, $line-height: null, $weight: null) {
+  font-size: $size;
+  @if $line-height != null {
+    line-height: $line-height;
+  }
+  @if $weight != null {
+    font-weight: $weight;
+  }
+}
+
+@mixin font-size-token($key, $line-height: null, $weight: null) {
+  font-size: fn.font-size-token($key);
+  @if $line-height != null {
+    line-height: $line-height;
+  }
+  @if $weight != null {
+    font-weight: $weight;
+  }
+}
+
+// Shadow helper for consistent depth.
+@mixin shadow($value) {
+  box-shadow: $value;
+}
+
+@mixin shadow-token($key) {
+  box-shadow: fn.shadow-token($key);
+}
+
+// Gradient background helper.
+@mixin gradient($value) {
+  background: $value;
+}
+
+@mixin gradient-token($key) {
+  background: fn.gradient-token($key);
+}

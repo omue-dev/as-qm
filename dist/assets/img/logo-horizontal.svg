@@ -1,0 +1,18 @@
+<svg width="280" height="60" viewBox="0 0 280 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- A -->
+  <path d="M25 45L35 15L45 45M28 35H42" stroke="#7FB545" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- & -->
+  <path d="M65 20C65 20 60 15 55 20C52 23 52 28 57 32C62 36 70 36 70 42C70 47 65 50 60 47" stroke="#7FB545" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- S -->
+  <path d="M90 20C90 20 85 15 90 10C95 5 105 5 112 10C119 15 119 20 112 25C105 30 95 30 88 35C81 40 81 47 88 50C95 53 105 47 105 47" stroke="#7FB545" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Dot accents -->
+  <circle cx="78" cy="28" r="4" fill="#4FACFE"/>
+  <circle cx="122" cy="28" r="4" fill="#4FACFE"/>
+
+  <!-- Main text -->
+  <text x="140" y="35" font-family="Georgia, serif" font-size="22" fill="#E8EEF7" font-weight="600">Qualitätsmanagement</text>
+  <text x="140" y="52" font-family="Georgia, serif" font-size="14" fill="#B8C5D9" font-weight="400">&amp; Unternehmensberatung</text>
+</svg>

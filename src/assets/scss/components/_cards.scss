@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+
+.feature-card {
+  border-radius: 1.25rem;
+  padding: 2rem;
+  @include shadow-token("card");
+}
+
+.metric-card {
+  background: #0f1b33;
+  min-height: 150px;
+  color: #f7f9ff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}

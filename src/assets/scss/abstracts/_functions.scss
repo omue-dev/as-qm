@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "sass:math";
+@use "./variables" as *;
+
+@function rem($px, $base: 16px) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@function token($map, $key) {
+  @return map.get($map, $key);
+}
+
+@function color-token($key) {
+  @return map.get($colors, $key);
+}
+
+@function shadow-token($key) {
+  @return map.get($shadows, $key);
+}
+
+@function gradient-token($key) {
+  @return map.get($gradients, $key);
+}
+
+@function font-size-token($key) {
+  @return map.get($font-sizes, $key);
+}

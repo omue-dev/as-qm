@@ -1,0 +1,6 @@
+// Font Awesome Free loaded locally for offline-ready icons.
+@use "../../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome" with (
+  $fa-font-path: "../webfonts"
+);
+@use "../../../../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@use "../../../../node_modules/@fortawesome/fontawesome-free/scss/brands";
