@@ -22226,7 +22226,7 @@ readers do not read off random characters that represent icons */
 }
 
 body {
-  background-color: #f1f1f1;
+  background-color: #d6e2ff;
   overflow-x: hidden;
 }
 
@@ -22377,27 +22377,6 @@ h2,
     font-size: 0;
     line-height: 0;
     width: calc(100% - 1rem);
-  }
-  .brand-icon {
-    font-size: 2rem;
-    color: #021b30;
-    margin-bottom: 0.5rem;
-  }
-  .brand-text {
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: #E8EEF7;
-    line-height: 1;
-    margin-bottom: 0.25rem;
-  }
-  .brand-subtext {
-    font-size: 0.45rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: #B8C5D9;
-    line-height: 1.2;
-    text-transform: uppercase;
   }
   .navbar-collapse {
     flex: 1;
@@ -22694,6 +22673,7 @@ h2,
   .brand-icon {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    color: #021b30;
     filter: drop-shadow(0 0 8px rgba(79, 172, 254, 0.4));
   }
 }
@@ -22756,6 +22736,20 @@ h2,
   .hero-body {
     margin-top: 7rem;
   }
+}
+
+.hero-row {
+  min-height: 100%;
+}
+
+@media (min-width: 992px) {
+  .hero-copy {
+    padding-right: 2.5rem;
+  }
+}
+
+.hero-media-col {
+  display: flex;
 }
 
 .hero-tag {
@@ -22870,6 +22864,24 @@ h2,
   }
 }
 
+.hero-media--bg {
+  background-image: url("../img/qm-haccp-lebensmittelaudit-qualitaetsmanagement-hero-v3.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  background-color: transparent;
+  box-shadow: none;
+  width: 100%;
+  min-height: 260px;
+}
+@media (min-width: 992px) {
+  .hero-media--bg {
+    min-height: 100%;
+  }
+}
+
 .hero-media img {
   border-radius: 1.35rem;
   width: 100%;
@@ -22895,10 +22907,6 @@ h2,
   }
 }
 
-.section-spacing {
-  padding: 4rem 0;
-}
-
 .section-light {
   background-color: #ffffff;
 }
@@ -22907,6 +22915,295 @@ h2,
   background-color: #f0f4ff;
 }
 
+.section-spacing {
+  padding: 5.5rem 0;
+}
+@media (min-width: 992px) {
+  .section-spacing {
+    padding: 9rem 0;
+  }
+}
+
+.footer-qm {
+  background: radial-gradient(140% 120% at 12% 0%, rgba(96, 142, 255, 0.55), transparent 55%), radial-gradient(90% 90% at 65% 20%, rgba(18, 52, 120, 0.8), transparent 60%), linear-gradient(135deg, #1b3f74 0%, #0b1529 55%, #060c1b 100%);
+  color: #f7f9ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-qm::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(70% 70% at 80% 20%, rgba(255, 255, 255, 0.08), transparent 60%);
+  opacity: 0.75;
+  pointer-events: none;
+}
+
+.footer-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.75rem;
+}
+
+.footer-headline {
+  font-size: 2.3rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.footer-subheadline {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1.5rem;
+}
+
+.footer-copy {
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.65;
+  margin-bottom: 1.15rem;
+}
+
+.footer-portrait-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-portrait {
+  max-width: 260px;
+  border-radius: 1.1rem;
+  box-shadow: 0 22px 50px rgba(4, 10, 24, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-caption {
+  position: absolute;
+  left: 50%;
+  bottom: -14px;
+  transform: translateX(-50%);
+  background: rgba(9, 20, 40, 0.9);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.footer-panel {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 24px 55px rgba(3, 10, 26, 0.55);
+}
+
+.footer-contact {
+  display: grid;
+  gap: 1rem;
+  font-size: 1rem;
+}
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.footer-contact i {
+  width: 2.3rem;
+  height: 2.3rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.footer-links a {
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-hero {
+  margin-top: 3.5rem;
+}
+
+.contact-hero-inner {
+  position: relative;
+  overflow: hidden;
+  padding: 3.25rem 2.5rem;
+  border-radius: 1.75rem;
+  background: radial-gradient(140% 120% at 12% 0%, rgba(96, 142, 255, 0.55), transparent 55%), radial-gradient(90% 90% at 65% 20%, rgba(18, 52, 120, 0.8), transparent 60%), linear-gradient(135deg, #1b3f74 0%, #0b1529 55%, #060c1b 100%);
+  color: #f7f9ff;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(5, 12, 26, 0.5);
+}
+
+.contact-hero-inner::before,
+.contact-hero-inner::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+.contact-hero-inner::before {
+  width: 180px;
+  height: 180px;
+  top: -60px;
+  left: -60px;
+}
+
+.contact-hero-inner::after {
+  width: 220px;
+  height: 220px;
+  bottom: -90px;
+  right: -70px;
+}
+
+.contact-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1.25rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.contact-hero-inner h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.contact-hero-inner p {
+  color: rgba(230, 238, 255, 0.9);
+  margin: 0;
+}
+
+.contact-body {
+  background: #f0f4ff;
+}
+
+.contact-card {
+  background: #ffffff;
+  border-radius: 1.4rem;
+  padding: 2.5rem;
+  box-shadow: 0 20px 50px rgba(6, 12, 24, 0.12);
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-side {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-image-card {
+  border-radius: 1.4rem;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(6, 12, 24, 0.2);
+  aspect-ratio: 2/1;
+}
+.contact-image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.contact-info-card {
+  background: #ffffff;
+  border-radius: 1.4rem;
+  padding: 2rem;
+  box-shadow: 0 18px 45px rgba(6, 12, 24, 0.15);
+}
+
+.contact-info-list {
+  display: grid;
+  gap: 1rem;
+}
+.contact-info-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  font-weight: 500;
+}
+.contact-info-list i {
+  width: 2.4rem;
+  height: 2.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.85rem;
+  background: #eef3ff;
+  color: #1b3f74;
+}
+
+.contact-social {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact-social-title {
+  font-weight: 600;
+}
+
+.contact-social-links {
+  display: flex;
+  gap: 0.75rem;
+}
+.contact-social-links a {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #1b3f74;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(6, 12, 24, 0.2);
+}
+
+@media (max-width: 991.98px) {
+  .contact-hero {
+    margin-top: 6rem;
+  }
+  .contact-hero-inner {
+    padding: 2.5rem 1.75rem;
+  }
+  .contact-hero-inner h1 {
+    font-size: 2rem;
+  }
+}
 .btn-hero {
   box-shadow: 0 12px 30px rgba(15, 45, 120, 0.35);
 }
@@ -22928,6 +23225,11 @@ h2,
   color: #f7f9ff;
   border-radius: 1rem;
   padding: 1.5rem;
+}
+
+.icon-left-text {
+  margin-top: 1.2rem;
+  font-size: 2rem;
 }
 
 .text-muted-strong {

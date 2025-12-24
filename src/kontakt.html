@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Kontakt zu Andreas Strauchen für Food-Qualitätsmanagement, HACCP Beratung, Lebensmittelaudits, Lebensmittelsicherheit und Schulungen."
+    />
+    <title>Kontakt für HACCP Beratung &amp; Lebensmittelaudits | Andreas Strauchen</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <header class="hero hero--qm">
+      <include src="partials/navbar.html"></include>
+
+      <div class="container hero-body" id="start">
+        <div class="contact-hero">
+
+            <span class="contact-hero-tag">Schreiben Sie mir</span>
+            <h1>Kontakt aufnehmen</h1>
+            <p>Food-Qualitätsmanagement, HACCP Beratung, Lebensmittelaudits und Schulungen aus einer Hand.</p>
+
+        </div>
+
+        <div class="row g-5 align-items-start mt-4">
+          <div class="col-lg-6">
+            <div class="contact-card">
+              <h2 class="contact-title">Lassen Sie uns sprechen</h2>
+              <p class="text-muted">
+                Nutzen Sie das Formular oder die Kontaktdaten. Andreas Strauchen meldet sich zeitnah mit einer
+                praxisnahen Einschätzung zu Ihrem QM Lebensmittel, HACCP Konzept oder Lebensmittelsicherheit-Thema.
+              </p>
+              <p class="text-muted">
+                Ob HACCP Schulung, Lebensmittelaudit Checkliste oder Unterstützung bei der Auditvorbereitung:
+                Sie erhalten konkrete Schritte und klare Prioritäten für Ihren Betrieb.
+              </p>
+              <form action="send.php" method="post" id="contact-form">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="firstName">Vorname</label>
+                    <input class="form-control" id="firstName" name="firstName" type="text" placeholder="Vorname" required />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="lastName">Nachname</label>
+                    <input class="form-control" id="lastName" name="lastName" type="text" placeholder="Nachname" required />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="email">E-Mail</label>
+                    <input class="form-control" id="email" name="email" type="email" placeholder="name@unternehmen.de" required />
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="message">Nachricht</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Worum geht es?" required></textarea>
+                  </div>
+                </div>
+                <div class="alert alert-success d-none mt-3" id="formSuccess" role="alert">
+                  Vielen Dank! Ihre Anfrage wurde erfolgreich versendet.
+                </div>
+                <div class="alert alert-danger d-none mt-3" id="formError" role="alert">
+                  Es gab ein Problem beim Senden. Bitte pruefen Sie Ihre Angaben oder versuchen Sie es spaeter erneut.
+                </div>
+                <div class="d-none">
+                  <label class="form-label" for="company">Firma</label>
+                  <input class="form-control" id="company" name="company" type="text" autocomplete="off" />
+                </div>
+                <input type="hidden" id="formStarted" name="formStarted" value="" />
+                <div class="form-check mt-3">
+                  <input class="form-check-input" type="checkbox" id="consent" name="consent" required />
+                  <label class="form-check-label" for="consent">
+                    Ich stimme zu, dass meine Daten zur Bearbeitung der Anfrage gespeichert werden.
+                  </label>
+                </div>
+                <div class="mt-3">
+                  <div class="g-recaptcha" data-sitekey="BITTE_SITE_KEY_EINTRAGEN"></div>
+                  <div class="form-text text-muted mt-2">
+                    reCAPTCHA aktivieren: Site Key in `src/.env` eintragen und hier ersetzen.
+                  </div>
+                </div>
+                <p class="small text-muted mt-3">
+                  Mit dem Absenden akzeptieren Sie die Datenschutzhinweise von A&amp;S QM Beratung.
+                </p>
+                <button class="btn btn-primary btn-lg mt-2" type="submit">
+                  Unverbindliches Erstgespräch vereinbaren
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="contact-side">
+              <div class="contact-image-card">
+                <img
+                  src="assets/img/andreas-strauchan-inhaber-qm-beratung-lebensmittel.webp"
+                  alt="Andreas Strauchen" />
+              </div>
+              <div class="contact-info-card">
+                <h5 class="mb-3">Direktkontakt</h5>
+                <ul class="list-unstyled contact-info-list">
+                  <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>02434 / 30 88 750</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <span>0152 / 01 76 67 87</span>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>info@as-qm.de</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="contact-social">
+                <div class="contact-social-title">Folgen Sie A&amp;S QM Beratung</div>
+                <div class="contact-social-links">
+                  <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-spacing contact-body" id="referenzen">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10 text-center">
+              <h2 class="text-strong"><strong>Referenzen aus der Lebensmittelindustrie</strong></h2>
+              <p class="text-muted mt-3">
+                Auswahl zufriedener Kunden aus QM Lebensmittel, HACCP und Lebensmittelsicherheit.
+                (Dummy-Daten zur Darstellung der Struktur.)
+              </p>
+            </div>
+          </div>
+          <div class="row g-4 mt-2">
+            <div class="col-md-4">
+              <div class="feature-card bg-white h-100">
+                <h5 class="mb-2">Nordsee Feinkost GmbH</h5>
+                <p class="text-muted mb-0">
+                  HACCP Audit begleitet und QM Lebensmittel Standards konsolidiert – Auditfähigkeit spürbar verbessert.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-card bg-white h-100">
+                <h5 class="mb-2">Bergland Molkerei AG</h5>
+                <p class="text-muted mb-0">
+                  HACCP Schulung und Lebensmittelaudit Checkliste etabliert – klare Abläufe und sichere Dokumentation.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-card bg-white h-100">
+                <h5 class="mb-2">Frischemarkt Rhein GmbH</h5>
+                <p class="text-muted mb-0">
+                  Lebensmittelsicherheit im Betrieb gestärkt – Risikoanalyse, Maßnahmenplan und Auditvorbereitung.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <include src="partials/footer.html"></include>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      (function () {
+        var formStarted = document.getElementById('formStarted');
+        if (formStarted) {
+          formStarted.value = Math.floor(Date.now() / 1000);
+        }
+
+        var params = new URLSearchParams(window.location.search);
+        var status = params.get('status');
+        var code = params.get('code');
+        var success = document.getElementById('formSuccess');
+        var error = document.getElementById('formError');
+
+        if (status === 'success' && success) {
+          success.classList.remove('d-none');
+        }
+
+        if (status === 'error' && error) {
+          var messages = {
+            missing: 'Bitte alle Pflichtfelder ausfuellen und die Einwilligung bestaetigen.',
+            email: 'Bitte eine gueltige E-Mail-Adresse eingeben.',
+            recaptcha: 'Bitte bestaetigen Sie das reCAPTCHA.',
+            spam: 'Bitte senden Sie das Formular erneut.',
+            send: 'Senden fehlgeschlagen. Bitte spaeter erneut versuchen.'
+          };
+          if (messages[code]) {
+            error.textContent = messages[code];
+          }
+          error.classList.remove('d-none');
+        }
+      })();
+    </script>
+  </body>
+</html>

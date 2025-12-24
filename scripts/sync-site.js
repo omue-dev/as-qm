@@ -15,8 +15,32 @@ const ensureDir = (dirPath) => {
   fs.mkdirSync(dirPath, { recursive: true });
 };
 
+const posthtml = require("posthtml");
+const include = require("posthtml-include");
+
+const renderHtml = (srcPath, relativePath) => {
+  const destPath = path.join(distRoot, relativePath);
+  ensureDir(path.dirname(destPath));
+  fs.readFile(srcPath, "utf8", (err, input) => {
+    if (err) {
+      console.error(`Read failed: ${relativePath}`, err.message);
+      return;
+    }
+    const result = posthtml([include({ root: srcRoot })]).process(input, { sync: true });
+    fs.writeFile(destPath, result.html, "utf8", (writeErr) => {
+      if (writeErr) {
+        console.error(`Write failed: ${relativePath}`, writeErr.message);
+      }
+    });
+  });
+};
+
 const copyFile = (srcPath, relativePath) => {
   if (shouldSkip(relativePath)) {
+    return;
+  }
+  if (relativePath.endsWith(".html")) {
+    renderHtml(srcPath, relativePath);
     return;
   }
   const destPath = path.join(distRoot, relativePath);
@@ -109,7 +133,7 @@ const watchHtmlFiles = (dir, relativeBase = "") => {
           console.log(`HTML changed: ${relativePath}`);
           const destPath = path.join(distRoot, relativePath);
           ensureDir(path.dirname(destPath));
-          fs.copyFileSync(fullPath, destPath);
+          renderHtml(fullPath, relativePath);
         }
       });
     }
