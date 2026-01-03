@@ -29,6 +29,20 @@
   }
 }
 
+.hero-row {
+  min-height: 100%;
+}
+
+.hero-copy {
+  @media (min-width: 992px) {
+    padding-right: 2.5rem;
+  }
+}
+
+.hero-media-col {
+  display: flex;
+}
+
 .hero-tag {
   display: inline-flex;
   align-items: center;
@@ -139,6 +153,23 @@
     height: 100%;
     display: flex;
     align-items: center;
+  }
+}
+
+.hero-media--bg {
+  background-image: url("../img/qm-haccp-lebensmittelaudit-qualitaetsmanagement-hero-v3.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  border: 5px solid rgba(255, 255, 255, 0.9);
+  background-color: transparent;
+  box-shadow: none;
+  width: 100%;
+  min-height: 260px;
+
+  @media (min-width: 992px) {
+    min-height: 100%;
   }
 }
 

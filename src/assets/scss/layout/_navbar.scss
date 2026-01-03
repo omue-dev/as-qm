@@ -81,30 +81,6 @@
     width: calc(100% - 1rem);
   }
 
-  .brand-icon {
-    font-size: 2rem;
-    color: #021b30;
-    margin-bottom: 0.5rem;
-  }
-
-  .brand-text {
-    font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    color: #E8EEF7;
-    line-height: 1;
-    margin-bottom: 0.25rem;
-  }
-
-  .brand-subtext {
-    font-size: 0.45rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    color: #B8C5D9;
-    line-height: 1.2;
-    text-transform: uppercase;
-  }
-
   .navbar-collapse {
     flex: 1;
     display: flex !important;
@@ -458,6 +434,7 @@
   @media (min-width: 992px) {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+    color: #021b30;
     filter: drop-shadow(0 0 8px rgba(79, 172, 254, 0.4));
   }
 }
