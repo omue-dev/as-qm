@@ -1,5 +1,11 @@
 // Bootstrap overrides must be defined before importing Bootstrap.
 @use "sass:map";
+
+// Font families - MUST be set before any other imports
+$font-family-sans-serif: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$headings-font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+$headings-font-weight: 700;
+
 @use "../abstracts" as *;
 
 $theme-colors: map.merge($theme-colors, (

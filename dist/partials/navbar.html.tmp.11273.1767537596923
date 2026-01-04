@@ -1,0 +1,104 @@
+<nav class="navbar-liquid" role="navigation" aria-label="Main Navigation">
+  <!-- Desktop: Floating Left Rail -->
+  <div class="nav-rail">
+    <!-- Logo/Brand with breathing animation -->
+    <a href="index.html" class="nav-brand" aria-label="A&S Audit & Sicherheit - Home">
+      <div class="brand-glow"></div>
+      <img src="assets/img/favicon.png" alt="A&S Logo" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-line">AUDIT &</span>
+        <span class="brand-line">SICHERHEIT</span>
+      </div>
+    </a>
+
+    <!-- Liquid Active Indicator (morphs between active items) -->
+    <div class="liquid-indicator" aria-hidden="true"></div>
+
+    <!-- Navigation Items -->
+    <ul class="nav-items" role="list">
+      <li class="nav-item" data-nav="home">
+        <a href="index.html" class="nav-link" aria-label="Startseite">
+          <div class="nav-icon-wrapper">
+            <i class="fas fa-home nav-icon" aria-hidden="true"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <span class="nav-label">Start</span>
+        </a>
+      </li>
+      <li class="nav-item" data-nav="philosophy">
+        <a href="philosophie.html" class="nav-link" aria-label="Philosophie">
+          <div class="nav-icon-wrapper">
+            <i class="fas fa-lightbulb nav-icon" aria-hidden="true"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <span class="nav-label">Philosophie</span>
+        </a>
+      </li>
+      <li class="nav-item" data-nav="services">
+        <a href="index.html#solutions" class="nav-link" aria-label="Leistungen">
+          <div class="nav-icon-wrapper">
+            <i class="fas fa-tasks nav-icon" aria-hidden="true"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <span class="nav-label">Leistungen</span>
+        </a>
+      </li>
+      <li class="nav-item" data-nav="about">
+        <a href="index.html#approach" class="nav-link" aria-label="Über mich">
+          <div class="nav-icon-wrapper">
+            <i class="fas fa-user nav-icon" aria-hidden="true"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <span class="nav-label">Über mich</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Contact CTA with pulse animation -->
+    <a href="kontakt.html#contact-form" class="nav-contact" aria-label="Kontakt">
+      <div class="contact-glow"></div>
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+      <span>Kontakt</span>
+    </a>
+
+    <!-- Footer Links (Impressum, Datenschutz) -->
+    <div class="nav-footer">
+      <a href="index.html#impressum" class="footer-link">Impressum</a>
+      <a href="index.html#datenschutz" class="footer-link">Datenschutz</a>
+    </div>
+  </div>
+
+  <!-- Mobile: Floating Dock-Style Bottom Nav -->
+  <div class="nav-dock">
+    <div class="dock-container">
+      <div class="dock-bg"></div>
+      <div class="dock-items">
+        <a href="index.html" class="dock-item" data-label="Start">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-home"></i>
+          </div>
+        </a>
+        <a href="philosophie.html" class="dock-item" data-label="Philosophie">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+        </a>
+        <a href="index.html#solutions" class="dock-item" data-label="Leistungen">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-tasks"></i>
+          </div>
+        </a>
+        <a href="index.html#approach" class="dock-item" data-label="Über mich">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-user"></i>
+          </div>
+        </a>
+        <a href="kontakt.html#contact-form" class="dock-item dock-item--primary" data-label="Kontakt">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-envelope"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

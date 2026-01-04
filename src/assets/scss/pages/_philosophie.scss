@@ -1,0 +1,485 @@
+@use "../abstracts" as *;
+@use "sass:map";
+
+// ============================================================================
+// PHILOSOPHIE PAGE STYLES
+// ============================================================================
+// Professional styling for the philosophy/approach page
+// Focuses on readability, hierarchy, and trust-building design elements
+// All spacings use Bootstrap's $spacer scale for consistency
+// ============================================================================
+
+
+// ----------------------------------------------------------------------------
+// HERO SECTION
+// ----------------------------------------------------------------------------
+// Philosophy page hero with gradient background matching brand identity
+// ----------------------------------------------------------------------------
+
+.hero--philosophie {
+  background:
+    gradient-token("hero-glow"),
+    gradient-token("hero-depth"),
+    gradient-token("hero-base");
+  min-height: 65vh;
+  position: relative;
+  overflow: hidden;
+
+  // Subtle overlay for depth
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    @include gradient-token("hero-overlay");
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+// Philosophy-specific hero media background
+.hero-media--philosophie {
+  background: linear-gradient(
+    135deg,
+    rgba(43, 108, 246, 0.15) 0%,
+    rgba(27, 47, 74, 0.35) 100%
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  // Decorative element suggesting quality control/precision
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+// PHILOSOPHIE CARDS
+// ----------------------------------------------------------------------------
+// Main content cards explaining principles and approach
+// Clean, professional design with Bootstrap-based spacing
+// ----------------------------------------------------------------------------
+
+.philosophie-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: $spacer * 2.5; // 2.5rem - consistent card padding
+  height: 100%;
+  @include shadow-token("card");
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  // Subtle hover effect for interactivity
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 56px rgba(6, 12, 24, 0.16);
+  }
+}
+
+// Icon container with primary brand color
+.philosophie-card-icon {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, #2b6cf6 0%, #1f5fe6 100%);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacer * 1.5; // 1.5rem - spacing-4
+
+  i {
+    font-size: 1.75rem;
+    color: #ffffff;
+  }
+}
+
+// Card title with strong hierarchy
+.philosophie-card-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #0b1020;
+  margin-bottom: $spacer; // 1rem - spacing-3
+  line-height: 1.4;
+}
+
+// Card body text with optimal readability
+.philosophie-card-text {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+// ----------------------------------------------------------------------------
+// PILLAR STRUCTURE
+// ----------------------------------------------------------------------------
+// Three-pillar approach visualization with numbered steps
+// Communicates structured methodology and professionalism
+// ----------------------------------------------------------------------------
+
+.philosophie-pillars {
+  display: grid;
+  gap: $spacer * 2; // 2rem
+}
+
+.philosophie-pillar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: $spacer * 1.5; // 1.5rem - spacing-4
+  align-items: start;
+}
+
+// Large numbered indicator for pillar sequence
+.philosophie-pillar-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2b6cf6;
+  line-height: 1;
+  opacity: 0.85;
+}
+
+// Pillar content wrapper
+.philosophie-pillar-content {
+  padding-top: $spacer * 0.25; // 0.25rem - spacing-1
+}
+
+// Pillar title styling
+.philosophie-pillar-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0b1020;
+  margin-bottom: $spacer * 0.75; // 0.75rem
+}
+
+// Pillar description text
+.philosophie-pillar-text {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+// ----------------------------------------------------------------------------
+// VISUAL HIGHLIGHT CARD
+// ----------------------------------------------------------------------------
+// Featured card with key points - right column visual element
+// Uses subtle gradient and Bootstrap spacing for emphasis
+// ----------------------------------------------------------------------------
+
+.philosophie-visual-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  border-radius: 1.75rem;
+  padding: $spacer * 3; // 3rem - spacing-5
+  @include shadow-token("card");
+  border: 1px solid rgba(43, 108, 246, 0.08);
+}
+
+.philosophie-visual-content {
+  display: grid;
+  gap: $spacer * 2.5; // 2.5rem
+}
+
+// Individual visual items with icon + content layout
+.philosophie-visual-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: $spacer * 1.25; // 1.25rem
+  align-items: start;
+
+  // Icon styling with brand colors
+  > i {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: linear-gradient(135deg, #2b6cf6 0%, #1f5fe6 100%);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #ffffff;
+    flex-shrink: 0;
+  }
+
+  // Text content
+  h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0b1020;
+    margin-bottom: $spacer * 0.5; // 0.5rem - spacing-2
+  }
+
+  p {
+    color: #4a5568;
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+// STATEMENT SECTION
+// ----------------------------------------------------------------------------
+// Important message block with list - emphasizes value proposition
+// ----------------------------------------------------------------------------
+
+.philosophie-statement {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: $spacer * 2.5; // 2.5rem
+  @include shadow-token("card");
+}
+
+// Introduction paragraph before list
+.philosophie-statement-text {
+  font-size: 1.15rem;
+  color: #2d3748;
+  line-height: 1.7;
+  margin-bottom: $spacer * 2; // 2rem
+}
+
+// Enhanced list with checkmark icons
+.philosophie-statement-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: $spacer * 1.5; // 1.5rem - spacing-4
+
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: $spacer; // 1rem - spacing-3
+    align-items: start;
+  }
+
+  // Checkmark icon styling
+  i {
+    width: 1.75rem;
+    height: 1.75rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    margin-top: $spacer * 0.25; // 0.25rem - spacing-1
+  }
+
+  // List item text
+  span {
+    color: #4a5568;
+    line-height: 1.7;
+    font-size: 1rem;
+
+    strong {
+      color: #1a202c;
+      font-weight: 600;
+    }
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+// QUOTE BLOCK
+// ----------------------------------------------------------------------------
+// Personal quote from Andreas Strauchen - builds trust and authenticity
+// ----------------------------------------------------------------------------
+
+.philosophie-quote {
+  background: linear-gradient(135deg, #1b3f74 0%, #0f2847 100%);
+  border-radius: 1.5rem;
+  padding: $spacer * 3 $spacer * 2.5; // 3rem 2.5rem
+  position: relative;
+  color: #ffffff;
+  @include shadow-token("regular");
+}
+
+// Quote icon - decorative element
+.philosophie-quote-icon {
+  position: absolute;
+  top: $spacer * 2; // 2rem
+  left: $spacer * 2.5; // 2.5rem
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.15);
+}
+
+// Quote text styling
+.philosophie-quote-text {
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.7;
+  margin: 0 0 $spacer * 1.5 0; // 1.5rem - spacing-4
+  padding-left: $spacer * 3.5; // 3.5rem
+  color: #f7f9ff;
+  font-style: italic;
+}
+
+// Quote author attribution
+.philosophie-quote-author {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #58c0ff;
+  font-style: normal;
+  padding-left: $spacer * 3.5; // 3.5rem
+}
+
+
+// ----------------------------------------------------------------------------
+// DIFFERENCE CARDS
+// ----------------------------------------------------------------------------
+// "What makes us different" section cards
+// Uses badge system for categorization
+// ----------------------------------------------------------------------------
+
+.philosophie-difference-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: $spacer * 2.5; // 2.5rem
+  height: 100%;
+  @include shadow-token("card");
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 56px rgba(6, 12, 24, 0.16);
+  }
+}
+
+// Category badge at top of card
+.philosophie-difference-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #2b6cf6 0%, #1f5fe6 100%);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: $spacer * 0.5 $spacer * 1.25; // 0.5rem 1.25rem
+  border-radius: 999px;
+  margin-bottom: $spacer * 1.5; // 1.5rem - spacing-4
+}
+
+// Card title
+.philosophie-difference-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #0b1020;
+  margin-bottom: $spacer; // 1rem - spacing-3
+  line-height: 1.4;
+}
+
+// Card description text
+.philosophie-difference-text {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 1rem;
+}
+
+
+// ----------------------------------------------------------------------------
+// RESPONSIVE ADJUSTMENTS
+// ----------------------------------------------------------------------------
+// Mobile-first responsive design ensuring readability on all devices
+// All responsive spacings use Bootstrap scale
+// ----------------------------------------------------------------------------
+
+@media (max-width: 991.98px) {
+  // Reduce padding on mobile - Bootstrap spacing-4
+  .philosophie-card {
+    padding: $spacer * 2; // 2rem
+  }
+
+  .philosophie-visual-card {
+    padding: $spacer * 2; // 2rem
+    margin-top: $spacer * 2; // 2rem
+  }
+
+  .philosophie-statement {
+    padding: $spacer * 2; // 2rem
+  }
+
+  // Adjust pillar layout for mobile
+  .philosophie-pillar {
+    grid-template-columns: 1fr;
+    gap: $spacer; // 1rem - spacing-3
+  }
+
+  .philosophie-pillar-number {
+    font-size: 2.5rem;
+  }
+
+  // Simplify quote on mobile
+  .philosophie-quote {
+    padding: $spacer * 2 $spacer * 1.5; // 2rem 1.5rem
+  }
+
+  .philosophie-quote-icon {
+    font-size: 2rem;
+    top: $spacer * 1.5; // 1.5rem - spacing-4
+    left: $spacer * 1.5; // 1.5rem - spacing-4
+  }
+
+  .philosophie-quote-text,
+  .philosophie-quote-author {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .philosophie-quote-text {
+    font-size: 1.15rem;
+  }
+
+  // Reduce difference card padding
+  .philosophie-difference-card {
+    padding: $spacer * 2; // 2rem
+  }
+}
+
+@media (max-width: 575.98px) {
+  // Further reduce spacing on small mobile
+  .philosophie-card-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+
+  .philosophie-card-title {
+    font-size: 1.2rem;
+  }
+
+  .philosophie-pillar-title {
+    font-size: 1.25rem;
+  }
+
+  .philosophie-visual-item {
+    > i {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.25rem;
+    }
+
+    h5 {
+      font-size: 1.1rem;
+    }
+  }
+
+  .philosophie-statement-text {
+    font-size: 1rem;
+  }
+}

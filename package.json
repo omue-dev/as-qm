@@ -10,7 +10,7 @@
     "dev:site": "concurrently \"sass --watch src/assets/scss/main.scss:dist/assets/css/main.css\" \"node scripts/sync-site.js\" \"node scripts/dev-site.js\"",
     "serve:site": "http-server dist -c-1",
     "build": "sass wireframe/sass/main.scss wireframe/css/main.css",
-    "build:site": "sass src/assets/scss/main.scss dist/assets/css/main.css && node scripts/build-site.js && mkdir -p dist/assets/webfonts && cp -r node_modules/@fortawesome/fontawesome-free/webfonts/* dist/assets/webfonts/",
+    "build:site": "sass src/assets/scss/main.scss dist/assets/css/main.css && node scripts/build-site.js && mkdir -p dist/assets/webfonts dist/assets/fonts/Roboto_Condensed dist/assets/fonts/DM_Serif_Text && cp -r node_modules/@fortawesome/fontawesome-free/webfonts/* dist/assets/webfonts/ && cp src/assets/fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf src/assets/fonts/Roboto_Condensed/RobotoCondensed-Italic-VariableFont_wght.ttf dist/assets/fonts/Roboto_Condensed/ && cp src/assets/fonts/DM_Serif_Text/DMSerifText-Regular.ttf src/assets/fonts/DM_Serif_Text/DMSerifText-Italic.ttf dist/assets/fonts/DM_Serif_Text/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

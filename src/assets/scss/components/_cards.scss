@@ -1,8 +1,15 @@
 @use "../abstracts" as *;
 
+// ============================================================================
+// CARD COMPONENTS
+// ============================================================================
+// Reusable card components with Bootstrap-based spacing
+// All padding/margin values use $spacer scale for consistency
+// ============================================================================
+
 .feature-card {
   border-radius: 1.25rem;
-  padding: 2rem;
+  padding: $spacer * 2; // 2rem - Bootstrap spacing equivalent
   @include shadow-token("card");
 }
 
@@ -11,9 +18,10 @@
   min-height: 150px;
   color: #f7f9ff;
   border-radius: 1rem;
-  padding: 1.5rem;
+  padding: $spacer * 1.5; // 1.5rem - spacing-4
 }
+
 .icon-left-text {
-  margin-top:1.2rem;
-  font-size:2rem;
+  margin-top: $spacer * 1.2; // 1.2rem
+  font-size: 2rem;
 }

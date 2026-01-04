@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Erfahren Sie mehr über unsere Philosophie im Food-Qualitätsmanagement: HACCP-Beratung, Lebensmittelsicherheit und praxisnahe QM Lebensmittel Lösungen für nachhaltige Qualität."
+    />
+    <meta
+      name="keywords"
+      content="Food-Qualitätsmanagement, HACCP, Lebensmittelqualität, QM Lebensmittel, Lebensmittelsicherheit, Lebensmittelaudits, QM Beratung Lebensmittel, HACCP Schulung"
+    />
+    <title>Philosophie: Food-Qualitätsmanagement & HACCP | Andreas Strauchen</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <header class="hero hero--philosophie">
+      <include src="partials/navbar.html"></include>
+      <div class="container hero-body" id="start">
+        <div class="row hero-row align-items-center gy-5 gx-5">
+          <div class="col-lg-7 order-2 order-lg-1 pe-lg-5 pe-xl-5">
+            <span class="hero-tag">Meine Philosophie - A&S Audit und Sicherheit</span>
+            <h1 class="hero-title mt-4 text-white">
+              Qualität beginnt mit Verständnis, nicht mit Checklisten
+            </h1>
+            <p class="lead text-muted-strong mt-4">
+              Als Experte für Food-Qualitätsmanagement und HACCP-Beratung verstehe ich:
+              Lebensmittelsicherheit ist kein Papierwerk, sondern gelebte Praxis.
+              Meine Philosophie vereint fachliche Exzellenz mit pragmatischer Umsetzbarkeit.
+            </p>
+          </div>
+          <div class="col-lg-5 hero-media-col ps-lg-5 ps-xl-5 order-1 order-lg-2">
+            <img
+              class="img-fluid rounded-4 shadow-lg"
+              src="assets/img/haccp-qualitaetsmanagement-lebensmittelsicherheit-hero.webp"
+              alt="Thermometer, Lebensmittel und Checkliste als Symbol für HACCP-Qualitätsmanagement und Lebensmittelsicherheit"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-spacing" id="grundsaetze">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <h2 class="text-strong text-center mb-5">
+              <strong>Die Grundsätze meiner Arbeit</strong>
+            </h2>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="philosophie-card">
+                  <div class="philosophie-card-icon">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                  </div>
+                  <h3 class="philosophie-card-title">Verstehen statt Kopieren</h3>
+                  <p class="philosophie-card-text">
+                    Jeder Betrieb ist anders. HACCP-Konzepte und QM-Systeme müssen individuell
+                    auf Ihre Prozesse zugeschnitten sein – nicht aus der Schublade.
+                    Ich analysiere Ihre Produktionsabläufe, verstehe Ihre Herausforderungen
+                    und entwickle maßgeschneiderte Lösungen für echte Lebensmittelsicherheit.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="philosophie-card">
+                  <div class="philosophie-card-icon">
+                    <i class="fa-solid fa-people-group"></i>
+                  </div>
+                  <h3 class="philosophie-card-title">Menschen befähigen</h3>
+                  <p class="philosophie-card-text">
+                    QM Lebensmittel funktioniert nur, wenn Ihr Team die Systeme versteht und verinnerlicht.
+                    Durch praxisnahe HACCP Schulung und kontinuierliche Begleitung stelle ich sicher,
+                    dass Qualitätsmanagement nicht aufgesetzt wirkt, sondern Teil der Betriebskultur wird.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="philosophie-card">
+                  <div class="philosophie-card-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                  <h3 class="philosophie-card-title">Praxis vor Theorie</h3>
+                  <p class="philosophie-card-text">
+                    Lebensmittelqualität wird nicht im Handbuch, sondern in der Produktion gesichert.
+                    Meine Beratung setzt auf umsetzbare Lösungen statt akademischer Konzepte.
+                    Was nicht im Betriebsalltag funktioniert, wird angepasst – so lange, bis es passt.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="philosophie-card">
+                  <div class="philosophie-card-icon">
+                    <i class="fa-solid fa-handshake"></i>
+                  </div>
+                  <h3 class="philosophie-card-title">Partnerschaft statt Projekt</h3>
+                  <p class="philosophie-card-text">
+                    Lebensmittelaudits und Zertifizierungen sind keine einmaligen Events.
+                    Ich begleite Sie langfristig, bin auch nach dem Audit für Sie da und
+                    helfe Ihnen, kontinuierliche Verbesserung zu leben – nicht nur zu dokumentieren.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft section-spacing" id="ansatz">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <h2 class="text-strong">
+              <strong>Mein Ansatz für nachhaltiges Food-Qualitätsmanagement</strong>
+            </h2>
+            <p class="h5 text-strong mt-4 mb-4">
+              Qualitätsmanagement in der Lebensmittelindustrie braucht drei Säulen:
+            </p>
+
+            <div class="philosophie-pillars mt-4">
+              <div class="philosophie-pillar">
+                <div class="philosophie-pillar-number">01</div>
+                <div class="philosophie-pillar-content">
+                  <h4 class="philosophie-pillar-title">Systematische Grundlage</h4>
+                  <p class="philosophie-pillar-text">
+                    HACCP bildet das Fundament. Ein strukturierter HACCP-Plan identifiziert
+                    kritische Kontrollpunkte und sichert die Lebensmittelsicherheit systematisch.
+                    Das HACCP-Konzept muss dokumentiert, verifiziert und regelmäßig aktualisiert sein.
+                  </p>
+                </div>
+              </div>
+
+              <div class="philosophie-pillar">
+                <div class="philosophie-pillar-number">02</div>
+                <div class="philosophie-pillar-content">
+                  <h4 class="philosophie-pillar-title">Kompetente Mitarbeiter</h4>
+                  <p class="philosophie-pillar-text">
+                    Schulung Lebensmittelqualität ist keine Pflichtübung. Durch zielgerichtete
+                    HACCP Schulung, Hygieneschulungen und praxisnahe Unterweisungen schaffen wir
+                    Bewusstsein und Handlungskompetenz auf allen Ebenen – vom Produktionsmitarbeiter
+                    bis zur Führungsebene.
+                  </p>
+                </div>
+              </div>
+
+              <div class="philosophie-pillar">
+                <div class="philosophie-pillar-number">03</div>
+                <div class="philosophie-pillar-content">
+                  <h4 class="philosophie-pillar-title">Kontinuierliche Verbesserung</h4>
+                  <p class="philosophie-pillar-text">
+                    Lebensmittelaudits (intern und extern), Eigenkontrollen und KVP-Prozesse
+                    stellen sicher, dass Ihr QM-System lebendig bleibt. QM Beratung Lebensmittel
+                    bedeutet für mich, Sie bei der Weiterentwicklung aktiv zu unterstützen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 order-1 order-lg-2">
+            <div class="philosophie-visual-card">
+              <div class="philosophie-visual-content">
+                <div class="philosophie-visual-item">
+                  <i class="fa-solid fa-shield-halved"></i>
+                  <div>
+                    <h5>Lebensmittelsicherheit</h5>
+                    <p>Gesichert durch HACCP und risikobasiertes Denken</p>
+                  </div>
+                </div>
+                <div class="philosophie-visual-item">
+                  <i class="fa-solid fa-star"></i>
+                  <div>
+                    <h5>Lebensmittelqualität</h5>
+                    <p>Messbar, reproduzierbar und kundenorientiert</p>
+                  </div>
+                </div>
+                <div class="philosophie-visual-item">
+                  <i class="fa-solid fa-sync"></i>
+                  <div>
+                    <h5>Kontinuierliche Verbesserung</h5>
+                    <p>Durch Audits, Analysen und Mitarbeiterentwicklung</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-spacing" id="warum">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <h2 class="text-strong text-center mb-5">
+              <strong>Warum Qualitätsmanagement Lebensmittelindustrie mehr ist als Compliance</strong>
+            </h2>
+            <div class="philosophie-statement">
+              <p class="philosophie-statement-text">
+                Viele Betriebe sehen QM Lebensmittel als notwendiges Übel – als Hürde für
+                Zertifizierungen wie IFS, FSSC 22000 oder BRC. Doch Qualitätsmanagement kann
+                und sollte mehr sein:
+              </p>
+              <ul class="philosophie-statement-list">
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <span><strong>Ein Schutzschild:</strong> HACCP schützt Ihre Kunden vor gesundheitlichen Risiken
+                  und Ihr Unternehmen vor Haftungsansprüchen, Rückrufen und Imageschäden.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <span><strong>Ein Effizienzmotor:</strong> Gut strukturierte Prozesse reduzieren Ausschuss,
+                  Reklamationen und Nacharbeiten – das spart Zeit und Geld.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <span><strong>Ein Wettbewerbsvorteil:</strong> Kunden vertrauen Lieferanten mit nachweislich
+                  hoher Lebensmittelqualität. Lebensmittelaudits bestätigen Ihre Zuverlässigkeit.</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check"></i>
+                  <span><strong>Eine Unternehmenskultur:</strong> Wenn Lebensmittelsicherheit zur DNA des Betriebs
+                  wird, handeln Mitarbeiter eigenverantwortlich richtig – auch ohne Kontrolle.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="philosophie-quote mt-5">
+              <div class="philosophie-quote-icon">
+                <i class="fa-solid fa-quote-left"></i>
+              </div>
+              <blockquote class="philosophie-quote-text">
+                „Qualität ist kein Zufall. Sie ist das Ergebnis von Wissen, Kompetenz und konsequentem Handeln.
+                Meine Aufgabe ist es, Ihr Team genau dafür zu befähigen."
+              </blockquote>
+              <cite class="philosophie-quote-author">– Andreas Strauchen</cite>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-soft section-spacing" id="unterschied">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <h2 class="text-strong text-center mb-5">
+              <strong>Was meine QM Beratung Lebensmittel anders macht</strong>
+            </h2>
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="philosophie-difference-card">
+                  <div class="philosophie-difference-badge">Erfahrung</div>
+                  <h4 class="philosophie-difference-title">Praxiswissen aus der Industrie</h4>
+                  <p class="philosophie-difference-text">
+                    Ich kenne die Realität in Produktionsbetrieben. Nicht aus Lehrbüchern,
+                    sondern aus jahrelanger Praxis im QM Lebensmittelindustrie – von der
+                    Fleischverarbeitung bis zur Backwarenindustrie.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="philosophie-difference-card">
+                  <div class="philosophie-difference-badge">Methodik</div>
+                  <h4 class="philosophie-difference-title">Strukturiert und pragmatisch</h4>
+                  <p class="philosophie-difference-text">
+                    Ich arbeite nach bewährten Methoden (HACCP-Kodex, IFS-Anforderungen,
+                    KVP-Prinzipien), passe sie aber flexibel an Ihre betriebliche Realität an.
+                    Keine Schablonen, sondern individuelle Lösungen.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="philosophie-difference-card">
+                  <div class="philosophie-difference-badge">Haltung</div>
+                  <h4 class="philosophie-difference-title">Partner, nicht Prüfer</h4>
+                  <p class="philosophie-difference-text">
+                    Ich verstehe mich als Teil Ihres Teams. Gemeinsam entwickeln wir Lösungen,
+                    die funktionieren. Auch nach Lebensmittelaudits bleibe ich ansprechbar und
+                    unterstütze bei neuen Herausforderungen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-spacing" id="leistungen-philosophie">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <h2 class="text-strong mb-4">
+              <strong>Bereit für gelebtes Qualitätsmanagement?</strong>
+            </h2>
+            <p class="h5 text-strong mb-5">
+              Lassen Sie uns gemeinsam ein QM-System aufbauen, das nicht nur Audits besteht,
+              sondern Ihre Lebensmittelqualität nachhaltig sichert.
+            </p>
+            <div class="d-flex flex-wrap gap-4 justify-content-center">
+              <a class="btn btn-primary btn-lg px-5" href="kontakt.html">
+                <i class="fa-solid fa-envelope me-2"></i>
+                Beratungsgespräch vereinbaren
+              </a>
+              <a class="btn btn-outline-primary btn-lg px-5" href="index.html#solutions">
+                <i class="fa-solid fa-list-check me-2"></i>
+                Leistungen entdecken
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <include src="partials/footer.html"></include>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
