@@ -1,21 +1,15 @@
 @use "../abstracts" as *;
 
+// ============================================================================
+// SECTION & FOOTER COMPONENTS
+// ============================================================================
+// Layout components with Bootstrap-based spacing
+// All spacing values use $spacer scale for consistency
+// ============================================================================
 
-
+// Section backgrounds and footer styles
 .section-light {
   @include color(background-color, "white");
-}
-
-.section-soft {
-  background-color: #f0f4ff;
-}
-
-.section-spacing {
-  padding: 5.5rem 0;
-
-  @media (min-width: 992px) {
-    padding: 9rem 0;
-  }
 }
 
 .footer-qm {
@@ -42,26 +36,26 @@
   letter-spacing: 0.18em;
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 0.75rem;
+  margin-bottom: $spacer * 0.75; // 0.75rem
 }
 
 .footer-headline {
   font-size: 2.3rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  margin-bottom: 0.35rem;
+  margin-bottom: $spacer * 0.35; // 0.35rem
 }
 
 .footer-subheadline {
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.75);
-  margin-bottom: 1.5rem;
+  margin-bottom: $spacer * 1.5; // 1.5rem - spacing-4
 }
 
 .footer-copy {
   color: rgba(255, 255, 255, 0.88);
   line-height: 1.65;
-  margin-bottom: 1.15rem;
+  margin-bottom: $spacer * 1.15; // 1.15rem
 }
 
 .footer-portrait-wrap {
@@ -83,7 +77,7 @@
   transform: translateX(-50%);
   background: rgba(9, 20, 40, 0.9);
   color: #fff;
-  padding: 0.4rem 1rem;
+  padding: $spacer * 0.4 $spacer; // 0.4rem 1rem
   border-radius: 999px;
   font-size: 0.85rem;
   letter-spacing: 0.08em;
@@ -95,20 +89,20 @@
   background: linear-gradient(140deg, rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05));
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 1.25rem;
-  padding: 2rem;
+  padding: $spacer * 2; // 2rem
   backdrop-filter: blur(16px);
   box-shadow: 0 24px 55px rgba(3, 10, 26, 0.55);
 }
 
 .footer-contact {
   display: grid;
-  gap: 1rem;
+  gap: $spacer; // 1rem - spacing-3
   font-size: 1rem;
 
   li {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: $spacer * 0.8; // 0.8rem
   }
 
   i {
@@ -128,12 +122,12 @@
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: $spacer * 0.75; // 0.75rem
 
   a {
     background: rgba(255, 255, 255, 0.12);
     color: #fff;
-    padding: 0.65rem 1.1rem;
+    padding: $spacer * 0.65 $spacer * 1.1; // 0.65rem 1.1rem
     border-radius: 999px;
     text-decoration: none;
     font-weight: 600;
@@ -145,13 +139,13 @@
 }
 
 .contact-hero {
-  margin-top: 3.5rem;
+  margin-top: $spacer * 3.5; // 3.5rem
 }
 
 .contact-hero-inner {
   position: relative;
   overflow: hidden;
-  padding: 3.25rem 2.5rem;
+  padding: $spacer * 3.25 $spacer * 2.5; // 3.25rem 2.5rem
   border-radius: 1.75rem;
   background:
     gradient-token("hero-glow"),
@@ -188,18 +182,18 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.4rem 1.25rem;
+  padding: $spacer * 0.4 $spacer * 1.25; // 0.4rem 1.25rem
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.14);
   font-size: 0.85rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  margin-bottom: $spacer * 1.5; // 1.5rem - spacing-4
 }
 
 .contact-hero-inner h1 {
   font-size: 2.4rem;
-  margin-bottom: 0.75rem;
+  margin-bottom: $spacer * 0.75; // 0.75rem
 }
 
 .contact-hero-inner p {
@@ -214,18 +208,18 @@
 .contact-card {
   background: #ffffff;
   border-radius: 1.4rem;
-  padding: 2.5rem;
+  padding: $spacer * 2.5; // 2.5rem
   box-shadow: 0 20px 50px rgba(6, 12, 24, 0.12);
 }
 
 .contact-title {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: $spacer; // 1rem - spacing-3
 }
 
 .contact-side {
   display: grid;
-  gap: 2rem;
+  gap: $spacer * 2; // 2rem
 }
 
 .contact-image-card {
@@ -246,18 +240,18 @@
 .contact-info-card {
   background: #ffffff;
   border-radius: 1.4rem;
-  padding: 2rem;
+  padding: $spacer * 2; // 2rem
   box-shadow: 0 18px 45px rgba(6, 12, 24, 0.15);
 }
 
 .contact-info-list {
   display: grid;
-  gap: 1rem;
+  gap: $spacer; // 1rem - spacing-3
 
   li {
     display: flex;
     align-items: center;
-    gap: 0.9rem;
+    gap: $spacer * 0.9; // 0.9rem
     font-weight: 500;
   }
 
@@ -275,7 +269,7 @@
 
 .contact-social {
   display: grid;
-  gap: 0.75rem;
+  gap: $spacer * 0.75; // 0.75rem
 }
 
 .contact-social-title {
@@ -284,7 +278,7 @@
 
 .contact-social-links {
   display: flex;
-  gap: 0.75rem;
+  gap: $spacer * 0.75; // 0.75rem
 
   a {
     width: 2.6rem;
@@ -302,11 +296,11 @@
 
 @media (max-width: 991.98px) {
   .contact-hero {
-    margin-top: 6rem;
+    margin-top: $spacer * 6; // 6rem
   }
 
   .contact-hero-inner {
-    padding: 2.5rem 1.75rem;
+    padding: $spacer * 2.5 $spacer * 1.75; // 2.5rem 1.75rem
   }
 
   .contact-hero-inner h1 {

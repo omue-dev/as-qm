@@ -15,6 +15,7 @@ $theme-colors: (
   "dark": $color-ink
 );
 
+$spacer: 1rem;
 $spacers: (
   0: 0,
   1: 0.25rem,
@@ -31,8 +32,6 @@ $body-bg: #d6e2ff;
 $body-color: #d6e2ff;
 $headings-color: #ffffff;
 
-$font-family-sans-serif: "Space Grotesk", "Manrope", "Helvetica Neue", sans-serif;
-$headings-font-weight: 600;
 $font-weight-semibold: 600;
 
 $border-radius: 1rem;

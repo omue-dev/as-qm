@@ -9,3 +9,30 @@
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
 }
+
+// Section Utilities - Bootstrap-based, globally consistent
+.py-section {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
+
+  @media (min-width: 992px) {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+  }
+}
+
+.bg-section-soft {
+  background-color: #f0f4ff;
+}
+
+// Spacious row utility for airy, breathing layouts
+// Adds horizontal margins to create visual whitespace
+.row-spacious {
+  margin-left: $spacer * 0.2;   // 0.5rem (8px) mobile
+  margin-right: $spacer * 0.2;
+
+  @media (min-width: 992px) {
+    margin-left: $spacer * 1.5;   // 3rem (48px) desktop
+    margin-right: $spacer * 1.5;
+  }
+}
