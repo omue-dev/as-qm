@@ -13,21 +13,9 @@
   <body>
     <header class="hero hero--qm">
       <include src="partials/navbar.html"></include>
-
-      <!-- Full-bleed image on left side -->
-      <div class="hero-image-fullbleed">
-        <img
-          src="assets/img/qm-haccp-lebensmittelaudit-qualitaetsmanagement-hero-v3.webp"
-          alt="Lebensmittelproduktion in der Qualitätskontrolle"
-          class="hero-image-fullbleed__img"
-          loading="lazy"
-        >
-      </div>
-
-      <!-- Content on right side -->
       <div class="container hero-body min-vh-100" id="start">
-        <div class="row row-spacious hero-row align-items-center">
-          <div class="col-lg-6 offset-lg-6">
+        <div class="row row-spacious hero-row align-items-stretch gy-5 gx-5">
+          <div class="col-lg-7 order-2 order-lg-1 pe-lg-5 pe-xl-5">
             <span class="hero-tag">Audit & Sicherheit - Andreas Strauchen<br> Qualitätsmanagement und Unternehmensberatung</span>
             <h1 class="hero-title mt-4">
               Food-Qualitäts&shy;management &amp; HACCP‑Beratung für die Lebensmittelindustrie
@@ -72,6 +60,16 @@
                 <i class="fa-solid fa-list-check me-2"></i>
                 Leistungen ansehen
               </a>
+            </div>
+          </div>
+          <div class="col-lg-5 hero-media-col ps-lg-5 ps-xl-5">
+            <div class="hero-media">
+              <img
+                src="assets/img/qm-haccp-lebensmittelaudit-qualitaetsmanagement-hero-v3.webp"
+                alt="Lebensmittelproduktion in der Qualitätskontrolle"
+                class="hero-media-img"
+                loading="lazy"
+              >
             </div>
           </div>
         </div>
@@ -290,7 +288,7 @@
     <!-- Leistungen Preview Section -->
     <section class="bg-section-soft py-section" id="leistungen-preview">
       <div class="container">
-        <div class="row row-spacious ">
+        <div class="row">
           <div class="col-lg-12">
             <h2 class="text-strong text-center mb-5">
               <strong>Meine Leistungen im Überblick</strong>
@@ -345,26 +343,30 @@
       </div>
     </section>
 
-    <section class="py-section" id="testimonials">
+    <!-- Testimonials Section - 3 Card Grid -->
+    <section class="py-section testimonials-section" id="testimonials">
       <div class="container">
-        <div class="row row-spacious justify-content-center">
-          <div class="col-lg-12">
-            <h2 class="text-strong text-center mb-5">
-              <strong>Das sagen meine Kunden</strong>
-            </h2>
-            <p class="h5 text-center text-strong mb-4">
-               Erfolgsgeschichten aus der Lebensmittelindustrie – von HACCP-Implementierung bis zur erfolgreichen Zertifizierung
-            </p>
+        <div class="testimonials-header text-center">
+          <h2 class="text-strong mb-4">
+            <strong>Das sagen meine Kunden</strong>
+          </h2>
+          <p class="lead mb-5">
+            Erfolgsgeschichten aus der Lebensmittelindustrie – von HACCP-Implementierung bis zur erfolgreichen Zertifizierung
+          </p>
+        </div>
 
-            <div class="row g-4 mt-5">
+        <div class="testimonials-slider-wrapper">
+          <div class="testimonials-slider-container">
+            <div class="testimonials-track" id="testimonialsTrack">
+
               <!-- Testimonial 1 -->
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100">
-                  <div class="service-card-icon">
-                    <i class="fa-solid fa-user-tie"></i>
+              <div class="testimonial-card-wrapper">
+                <div class="testimonial-card-modern">
+                  <span class="testimonial-quote-accent">"</span>
+                  <div class="testimonial-icon">
+                    <i class="fa-solid fa-industry"></i>
                   </div>
-                  <div class="service-badge mb-4">Hans Wurst | Lebensmittelhersteller</div>
-                   <div class="testimonial-stars">
+                  <div class="testimonial-stars">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -374,21 +376,21 @@
                   <p class="testimonial-text-modern">
                     Die Zusammenarbeit war hervorragend. Das HACCP-Konzept wurde nicht nur auf Papier gebracht, sondern gemeinsam mit unserem Team praktisch umgesetzt. Das IFS-Audit haben wir mit Bravour bestanden.
                   </p>
-                  <div class="service-card-footer">
-
-                    <span class="service-badge">IFS Food Zertifizierung</span>
+                  <div class="testimonial-company">
+                    <div class="company-name">Lebensmittelhersteller</div>
+                    <div class="company-details">IFS Food Zertifizierung</div>
                   </div>
                 </div>
               </div>
 
               <!-- Testimonial 2 -->
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100">
-                  <div class="service-card-icon">
-                    <i class="fa-solid fa-user-tie"></i>
+              <div class="testimonial-card-wrapper">
+                <div class="testimonial-card-modern">
+                  <span class="testimonial-quote-accent">"</span>
+                  <div class="testimonial-icon">
+                    <i class="fa-solid fa-bread-slice"></i>
                   </div>
-                  <div class="service-badge mb-4">Hans Wurst | Lebensmittelhersteller</div>
-                   <div class="testimonial-stars">
+                  <div class="testimonial-stars">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -396,23 +398,23 @@
                     <i class="fa-solid fa-star"></i>
                   </div>
                   <p class="testimonial-text-modern">
-                    Die Zusammenarbeit war hervorragend. Das HACCP-Konzept wurde nicht nur auf Papier gebracht, sondern gemeinsam mit unserem Team praktisch umgesetzt. Das IFS-Audit haben wir mit Bravour bestanden.
+                    Endlich ein Berater, der Praxis versteht! Die HACCP-Schulungen waren praxisnah und verständlich. Unsere Mitarbeiter wissen jetzt genau, worauf es ankommt. Die Dokumentation ist auditfest und funktioniert im Alltag.
                   </p>
-                  <div class="service-card-footer">
-
-                    <span class="service-badge">IFS Food Zertifizierung</span>
+                  <div class="testimonial-company">
+                    <div class="company-name">Bäckerei & Konditorei</div>
+                    <div class="company-details">QS Zertifizierung</div>
                   </div>
                 </div>
               </div>
 
               <!-- Testimonial 3 -->
-              <div class="col-md-6 col-lg-4">
-                <div class="service-card h-100">
-                  <div class="service-card-icon">
-                    <i class="fa-solid fa-user-tie"></i>
+              <div class="testimonial-card-wrapper">
+                <div class="testimonial-card-modern">
+                  <span class="testimonial-quote-accent">"</span>
+                  <div class="testimonial-icon">
+                    <i class="fa-solid fa-cheese"></i>
                   </div>
-                  <div class="service-badge mb-4">Hans Wurst | Lebensmittelhersteller</div>
-                   <div class="testimonial-stars">
+                  <div class="testimonial-stars">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -420,28 +422,222 @@
                     <i class="fa-solid fa-star"></i>
                   </div>
                   <p class="testimonial-text-modern">
-                    Die Zusammenarbeit war hervorragend. Das HACCP-Konzept wurde nicht nur auf Papier gebracht, sondern gemeinsam mit unserem Team praktisch umgesetzt. Das IFS-Audit haben wir mit Bravour bestanden.
+                    Von der Gap-Analyse bis zur FSSC 22000 Zertifizierung: durchgehend kompetent und verlässlich. Der hands-on Ansatz hat uns enorm geholfen. Auch nach dem Audit steht die Unterstützung weiterhin zur Verfügung.
                   </p>
-                  <div class="service-card-footer">
-
-                    <span class="service-badge">IFS Food Zertifizierung</span>
+                  <div class="testimonial-company">
+                    <div class="company-name">Molkerei & Käserei</div>
+                    <div class="company-details">FSSC 22000 Zertifizierung</div>
                   </div>
                 </div>
               </div>
 
             </div>
           </div>
+
+          <!-- Navigation Controls (hidden if 3 or fewer cards) -->
+          <div class="testimonials-nav" id="testimonialsNav">
+            <button class="testimonial-nav-btn" id="testimonialPrev" aria-label="Vorheriges Testimonial">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="testimonial-dots" id="testimonialDots"></div>
+
+            <button class="testimonial-nav-btn" id="testimonialNext" aria-label="Nächstes Testimonial">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="testimonials-cta text-center">
+          <p class="lead mb-4">
+            Werden Sie Teil der Erfolgsgeschichten
+          </p>
+          <a class="btn btn-primary btn-lg px-5" href="kontakt.html">
+            <i class="fa-solid fa-comments me-2"></i>
+            Jetzt unverbindlich anfragen
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials Section - 3 Card Grid -->
-
-
     <include src="partials/footer.html"></include>
+
+    <script>
+      // Enhanced Testimonials Slider with Smooth Animations
+      (function() {
+        const slider = document.getElementById('testimonialsSlider');
+        const dotsContainer = document.getElementById('testimonialDots');
+        const prevBtn = document.getElementById('testimonialPrev');
+        const nextBtn = document.getElementById('testimonialNext');
+
+        if (!slider || !dotsContainer || !prevBtn || !nextBtn) return;
+
+        const slides = slider.querySelectorAll('.testimonial-slide');
+        let currentIndex = 0;
+        let autoPlayInterval;
+        const autoPlayDelay = 7000; // 7 seconds
+        let isTransitioning = false;
+
+        // Create dots
+        slides.forEach((_, index) => {
+          const dot = document.createElement('div');
+          dot.className = 'testimonial-dot';
+          dot.setAttribute('aria-label', `Testimonial ${index + 1}`);
+          dot.addEventListener('click', () => goToSlide(index));
+          dotsContainer.appendChild(dot);
+        });
+
+        const dots = dotsContainer.querySelectorAll('.testimonial-dot');
+
+        function updateSlider() {
+          slides.forEach((slide, index) => {
+            slide.classList.remove('active', 'prev');
+            if (index === currentIndex) {
+              slide.classList.add('active');
+            } else if (index < currentIndex) {
+              slide.classList.add('prev');
+            }
+          });
+
+          dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+          });
+        }
+
+        function goToSlide(index) {
+          if (isTransitioning) return; // Prevent rapid clicking
+
+          if (index < 0) {
+            currentIndex = slides.length - 1;
+          } else if (index >= slides.length) {
+            currentIndex = 0;
+          } else {
+            currentIndex = index;
+          }
+
+          isTransitioning = true;
+          updateSlider();
+          resetAutoPlay();
+
+          // Reset transition lock after animation completes
+          setTimeout(() => {
+            isTransitioning = false;
+          }, 800);
+        }
+
+        function nextSlide() {
+          goToSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+          goToSlide(currentIndex - 1);
+        }
+
+        function startAutoPlay() {
+          autoPlayInterval = setInterval(nextSlide, autoPlayDelay);
+        }
+
+        function stopAutoPlay() {
+          if (autoPlayInterval) {
+            clearInterval(autoPlayInterval);
+          }
+        }
+
+        function resetAutoPlay() {
+          stopAutoPlay();
+          startAutoPlay();
+        }
+
+        // Event listeners
+        prevBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          prevSlide();
+        });
+
+        nextBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          nextSlide();
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') prevSlide();
+          if (e.key === 'ArrowRight') nextSlide();
+        });
+
+        // Touch/swipe support with drag effect
+        let touchStartX = 0;
+        let touchEndX = 0;
+        let isDragging = false;
+
+        slider.addEventListener('touchstart', (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+          isDragging = true;
+          slider.classList.add('swiping');
+        }, { passive: true });
+
+        slider.addEventListener('touchmove', (e) => {
+          if (!isDragging) return;
+          touchEndX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        slider.addEventListener('touchend', (e) => {
+          if (!isDragging) return;
+          isDragging = false;
+          slider.classList.remove('swiping');
+          handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+          const swipeThreshold = 50;
+          const diff = touchStartX - touchEndX;
+
+          if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+              nextSlide();
+            } else {
+              prevSlide();
+            }
+          }
+        }
+
+        // Pause auto-play on hover (desktop only)
+        if (window.innerWidth > 768) {
+          slider.addEventListener('mouseenter', stopAutoPlay);
+          slider.addEventListener('mouseleave', startAutoPlay);
+        }
+
+        // Pause auto-play when tab is not visible
+        document.addEventListener('visibilitychange', () => {
+          if (document.hidden) {
+            stopAutoPlay();
+          } else {
+            startAutoPlay();
+          }
+        });
+
+        // Initialize
+        updateSlider();
+        startAutoPlay();
+
+        // Preload next slide for smooth transition
+        function preloadNextSlide() {
+          const nextIndex = (currentIndex + 1) % slides.length;
+          const nextSlide = slides[nextIndex];
+          const images = nextSlide.querySelectorAll('img');
+          images.forEach(img => {
+            if (!img.complete) {
+              img.loading = 'eager';
+            }
+          });
+        }
+
+        // Call preload periodically
+        setInterval(preloadNextSlide, 3000);
+      })();
+    </script>
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/testimonials.js"></script>
   </body>
 </html>

@@ -1,0 +1,266 @@
+@use "../abstracts" as *;
+
+// ============================================================================
+// TESTIMONIALS SECTION - HIGH QUALITY 3-CARD GRID
+// ============================================================================
+// Professional testimonial cards matching service card design quality
+// 3-column grid with smooth sliding functionality
+// ============================================================================
+
+.testimonials-section {
+  background:
+    gradient-token("hero-glow"),
+    gradient-token("hero-depth"),
+    gradient-token("hero-base");
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(70% 70% at 50% 50%, rgba(255, 255, 255, 0.03), transparent 70%);
+    pointer-events: none;
+  }
+}
+
+.testimonials-header {
+  position: relative;
+  z-index: 2;
+
+  h2 {
+    @include color(color, "text-on-dark");
+  }
+
+  .lead {
+    @include color(color, "text-on-dark-muted");
+  }
+}
+
+// Slider container wrapper with padding for hover effect
+.testimonials-slider-wrapper {
+  position: relative;
+  z-index: 2;
+  margin-top: $spacer * 3;
+  padding: $spacer 0; // Padding to prevent hover overflow
+}
+
+// Overflow container for sliding
+.testimonials-slider-container {
+  overflow: hidden;
+  position: relative;
+}
+
+// Track that slides
+.testimonials-track {
+  display: flex;
+  gap: $spacer * 1.5;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  @media (min-width: 992px) {
+    gap: $spacer * 2;
+  }
+}
+
+// Individual testimonial card wrapper
+.testimonial-card-wrapper {
+  flex: 0 0 100%;
+
+  @media (min-width: 768px) {
+    flex: 0 0 calc(50% - #{$spacer * 0.75});
+  }
+
+  @media (min-width: 992px) {
+    flex: 0 0 calc(33.333% - #{$spacer * 1.333});
+  }
+}
+
+// Main testimonial card - styled like service cards
+.testimonial-card-modern {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: $spacer * 2.5; // 2.5rem
+  height: 100%;
+  @include shadow-token("card");
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+
+  @media (max-width: 991.98px) {
+    padding: $spacer * 2; // 2rem on mobile
+  }
+
+  // Hover effect with elevation - matching service cards
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 56px rgba(6, 12, 24, 0.18);
+    border-color: rgba(43, 108, 246, 0.2);
+
+    .testimonial-icon {
+      transform: scale(1.1) rotate(5deg);
+      background: linear-gradient(135deg, #1f5fe6 0%, #2b6cf6 100%);
+    }
+  }
+}
+
+// Industry icon at top - matching service-card-icon
+.testimonial-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  background: linear-gradient(135deg, #2b6cf6 0%, #1f5fe6 100%);
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacer * 1.5; // 1.5rem
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 20px rgba(43, 108, 246, 0.3);
+
+  @media (max-width: 991.98px) {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  i {
+    font-size: 2rem;
+    color: #ffffff;
+
+    @media (max-width: 991.98px) {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+// Star rating
+.testimonial-stars {
+  display: flex;
+  gap: $spacer * 0.5;
+  margin-bottom: $spacer * 1.5;
+
+  i {
+    color: #ffa726;
+    font-size: 1rem;
+    filter: drop-shadow(0 2px 4px rgba(255, 167, 38, 0.3));
+  }
+}
+
+// Testimonial text
+.testimonial-text-modern {
+  color: #4a5568;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: $spacer * 1.5;
+  flex-grow: 1;
+
+  @media (min-width: 992px) {
+    font-size: 1rem;
+  }
+}
+
+// Company info at bottom - matching service-card-footer
+.testimonial-company {
+  padding-top: $spacer * 1.5; // 1.5rem
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  margin-top: auto;
+
+  .company-name {
+    color: #0b1020;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: $spacer * 0.5;
+  }
+
+  .company-details {
+    color: #4a5568;
+    font-size: 0.85rem;
+  }
+}
+
+// Navigation controls (only show if more than 3 cards)
+.testimonials-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $spacer * 2;
+  margin-top: $spacer * 3;
+  position: relative;
+  z-index: 3;
+
+  &.hidden {
+    display: none;
+  }
+}
+
+.testimonial-nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(43, 108, 246, 0.2);
+  border: 1px solid rgba(88, 192, 255, 0.4);
+  @include color(color, "accent");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+
+  &:hover:not(:disabled) {
+    background: rgba(43, 108, 246, 0.4);
+    border-color: rgba(88, 192, 255, 0.6);
+    transform: scale(1.1);
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+}
+
+// Progress dots
+.testimonial-dots {
+  display: flex;
+  gap: $spacer * 0.75;
+  align-items: center;
+}
+
+.testimonial-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &.active {
+    width: 32px;
+    border-radius: 999px;
+    background: rgba(88, 192, 255, 0.8);
+    border-color: rgba(88, 192, 255, 1);
+    @include shadow-token("glow");
+  }
+
+  &:hover:not(.active) {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.2);
+  }
+}
+
+// CTA section
+.testimonials-cta {
+  position: relative;
+  z-index: 2;
+  margin-top: $spacer * 4;
+
+  .lead {
+    @include color(color, "text-on-dark-muted");
+    font-size: 1.15rem;
+  }
+}

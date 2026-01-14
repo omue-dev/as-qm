@@ -1,0 +1,522 @@
+@use "../abstracts" as *;
+@use "sass:map";
+
+// ============================================================================
+// LEISTUNGEN PAGE STYLES
+// ============================================================================
+// Services page with distinctive design elements
+// Features: Hero stats, service cards with hover animations, approach steps
+// All spacings use Bootstrap's $spacer scale for consistency
+// ============================================================================
+
+
+// ----------------------------------------------------------------------------
+// HERO SECTION
+// ----------------------------------------------------------------------------
+// Services page hero with gradient background and stats display
+// ----------------------------------------------------------------------------
+
+.hero--leistungen {
+  background:
+    gradient-token("hero-glow"),
+    gradient-token("hero-depth"),
+    gradient-token("hero-base");
+  min-height: 75vh;
+  position: relative;
+  overflow: hidden;
+  padding: $spacer 0 $spacer * 5.5; // Consistent bottom padding across all heroes
+
+  // Animated overlay for visual interest
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    @include gradient-token("hero-overlay");
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  // Subtle animated grain texture
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.02) 2px,
+        rgba(255, 255, 255, 0.02) 4px
+      );
+    pointer-events: none;
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+// HERO STATS CARDS
+// ----------------------------------------------------------------------------
+// Distinctive stat display cards in hero section
+// Staggered animation on load for visual impact
+// ----------------------------------------------------------------------------
+
+.leistungen-hero-stats {
+  display: grid;
+  gap: $spacer * 1.5; // 1.5rem - spacing-4
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.leistungen-stat-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1.25rem;
+  padding: $spacer * 2; // 2rem
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+
+  // Animated accent border on hover
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1.25rem;
+    padding: 2px;
+    background: linear-gradient(135deg, #58c0ff, #2b6cf6);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  &:hover {
+    transform: translateY(-8px) scale(1.03);
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.18) 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.leistungen-stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #58c0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  margin-bottom: $spacer * 0.5; // 0.5rem - spacing-2
+}
+
+.leistungen-stat-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+// ----------------------------------------------------------------------------
+// SERVICE CARDS
+// ----------------------------------------------------------------------------
+// Main service cards with icons, descriptions, and feature lists
+// Featured card variant for highlighted services
+// ----------------------------------------------------------------------------
+
+.service-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: $spacer * 2.5; // 2.5rem
+  height: 100%;
+  @include shadow-token("card");
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+
+  // Hover effect with elevation
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 56px rgba(6, 12, 24, 0.18);
+    border-color: rgba(43, 108, 246, 0.2);
+
+    .service-card-icon {
+      transform: scale(1.1) rotate(5deg);
+      background: linear-gradient(135deg, #1f5fe6 0%, #2b6cf6 100%);
+    }
+  }
+}
+
+// Featured service card variant
+.service-card--featured {
+  border-color: #2b6cf6;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f8fbff 100%
+  );
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, #2b6cf6, #58c0ff);
+    border-radius: 1.5rem;
+    z-index: -1;
+    opacity: 0.15;
+  }
+}
+
+.service-card-badge {
+  position: absolute;
+  top: $spacer * 1.5; // 1.5rem
+  right: $spacer * 1.5; // 1.5rem
+  background: linear-gradient(135deg, #2b6cf6 0%, #1f5fe6 100%);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: $spacer * 0.5 $spacer; // 0.5rem 1rem
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(43, 108, 246, 0.4);
+}
+
+.service-card-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  background: linear-gradient(135deg, #2b6cf6 0%, #1f5fe6 100%);
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $spacer * 1.5; // 1.5rem - spacing-4
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 20px rgba(43, 108, 246, 0.3);
+
+  i {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+}
+
+// Service list styling
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: $spacer; // 1rem - spacing-3
+  flex-grow: 1;
+
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: $spacer * 0.75; // 0.75rem
+    align-items: start;
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.6;
+
+    i {
+      color: #10b981;
+      font-size: 0.875rem;
+      margin-top: $spacer * 0.25; // 0.25rem - spacing-1
+    }
+  }
+}
+
+.service-card-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacer * 0.5; // 0.5rem - spacing-2
+  margin-top: auto;
+  padding-top: $spacer * 1.5; // 1.5rem - spacing-4
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.service-badge {
+  display: inline-block;
+  background: rgba(43, 108, 246, 0.1);
+  color: #2b6cf6;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: $spacer * 0.375 $spacer * 0.75; // 0.375rem 0.75rem
+  border-radius: 999px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #2b6cf6;
+    color: #ffffff;
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+// APPROACH CARDS
+// ----------------------------------------------------------------------------
+// Numbered step cards showing methodology
+// Progressive number design with clean layout
+// ----------------------------------------------------------------------------
+
+.approach-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: $spacer * 2.5; // 2.5rem
+  height: 100%;
+  @include shadow-token("card");
+  position: relative;
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 56px rgba(6, 12, 24, 0.16);
+
+    .approach-number {
+      transform: scale(1.1);
+      background: linear-gradient(135deg, #1f5fe6 0%, #2b6cf6 100%);
+    }
+  }
+}
+
+.approach-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, #2b6cf6 0%, #58c0ff 100%);
+  color: #ffffff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  margin-bottom: $spacer * 1.5; // 1.5rem - spacing-4
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 20px rgba(43, 108, 246, 0.25);
+}
+
+
+// ----------------------------------------------------------------------------
+// STANDARDS GRID
+// ----------------------------------------------------------------------------
+// Badge grid for certifications and standards
+// Responsive grid with hover animations
+// ----------------------------------------------------------------------------
+
+.standards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $spacer * 1.5; // 1.5rem - spacing-4
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.standard-badge {
+  background: linear-gradient(
+    135deg,
+    rgba(43, 108, 246, 0.08) 0%,
+    rgba(88, 192, 255, 0.08) 100%
+  );
+  border: 2px solid rgba(43, 108, 246, 0.15);
+  border-radius: 1rem;
+  padding: $spacer * 1.25 $spacer * 1.5; // 1.25rem 1.5rem
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #1f5fe6;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+
+  // Animated background on hover
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #2b6cf6 0%, #58c0ff 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 0;
+  }
+
+  &:hover {
+    transform: translateY(-4px) scale(1.05);
+    border-color: #2b6cf6;
+    color: #ffffff;
+    box-shadow: 0 12px 28px rgba(43, 108, 246, 0.3);
+
+    &::before {
+      opacity: 1;
+    }
+
+    // Ensure text stays on top
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+// ANIMATIONS
+// ----------------------------------------------------------------------------
+// Keyframe animations for page load effects
+// ----------------------------------------------------------------------------
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+// RESPONSIVE ADJUSTMENTS
+// ----------------------------------------------------------------------------
+// Mobile-first responsive design ensuring readability on all devices
+// All responsive spacings use Bootstrap scale
+// ----------------------------------------------------------------------------
+
+@media (max-width: 991.98px) {
+  // Reduce hero height on tablet
+  .hero--leistungen {
+    min-height: 60vh;
+  }
+
+  // Adjust stats grid for mobile
+  .leistungen-hero-stats {
+    gap: $spacer; // 1rem - spacing-3
+  }
+
+  .leistungen-stat-card {
+    padding: $spacer * 1.5; // 1.5rem - spacing-4
+  }
+
+  .leistungen-stat-number {
+    font-size: 2.5rem;
+  }
+
+  // Reduce service card padding
+  .service-card {
+    padding: $spacer * 2; // 2rem
+  }
+
+  .service-card-icon {
+    width: 4rem;
+    height: 4rem;
+
+    i {
+      font-size: 1.75rem;
+    }
+  }
+
+  // Adjust approach cards
+  .approach-card {
+    padding: $spacer * 2; // 2rem
+  }
+
+  .approach-number {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.5rem;
+  }
+
+  // Standards grid - 2 columns on tablet
+  .standards-grid {
+    gap: $spacer; // 1rem - spacing-3
+  }
+
+  .standard-badge {
+    padding: $spacer $spacer * 1.25; // 1rem 1.25rem
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  // Further adjustments for mobile
+  .leistungen-stat-number {
+    font-size: 2rem;
+  }
+
+  .leistungen-stat-label {
+    font-size: 0.9rem;
+  }
+
+  .service-card-badge {
+    font-size: 0.7rem;
+    padding: $spacer * 0.375 $spacer * 0.75; // 0.375rem 0.75rem
+  }
+
+  // Standards grid - single column on small mobile
+  .standards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575.98px) {
+  // Smallest mobile adjustments
+  .service-card {
+    padding: $spacer * 1.5; // 1.5rem - spacing-4
+  }
+
+  .service-card-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+
+  .approach-card {
+    padding: $spacer * 1.5; // 1.5rem - spacing-4
+  }
+}
+
+
+// ----------------------------------------------------------------------------
+// EXPERTISE BOX
+// ----------------------------------------------------------------------------
+// Highlighted box with key expertise information
+// ----------------------------------------------------------------------------
+
+.philosophie-expertise-box {
+  h4, .h5 {
+    margin-bottom: $spacer; // 1rem - spacing-3
+  }
+}

@@ -8,7 +8,8 @@
   @include color(color, "text-on-dark");
   position: relative;
   overflow: hidden;
-  padding: 1rem 0 5.5rem;
+  padding: $spacer 0 $spacer * 5.5; // Consistent hero padding across all pages
+  min-height: 100vh;
 }
 
 .hero--qm::after {
@@ -19,18 +20,45 @@
   pointer-events: none;
 }
 
-.hero-body {
-  position: relative;
-  z-index: 1;
-  margin-top: 3rem;
+// Full-bleed hero image (fills left 50% of viewport)
+.hero-image-fullbleed {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40vw;
+  height: 100%;
+  z-index: 0;
+  display: none; // Hide on mobile
 
   @media (min-width: 992px) {
-    margin-top: 7rem;
+    display: block;
+  }
+}
+
+.hero-image-fullbleed__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-body {
+  position: relative;
+  z-index: 1; // Above full-bleed image
+  display: flex;
+  align-items: center;
+  padding-top: $spacer * 3; // 3rem
+  padding-bottom: $spacer * 3;
+
+  @media (min-width: 992px) {
+    padding-top: $spacer * 7; // 7rem
+    padding-bottom: $spacer * 7;
   }
 }
 
 .hero-row {
-  min-height: 100%;
+  width: 100%;
 }
 
 .hero-copy {
@@ -39,8 +67,37 @@
   }
 }
 
-.hero-media-col {
+// Legacy hero media (for other pages that use boxed images)
+.hero-media-col{
   display: flex;
+}
+
+.hero-media{
+  width: 100%;
+  border-radius: $spacer * 1.6; // 1.6rem
+  padding: $spacer * 0.65; // 0.65rem
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.16);
+  overflow: hidden;             // wichtig für runde Ecken
+}
+
+.hero-media-img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: $spacer * 1.35; // 1.35rem
+  object-fit: cover;
+  object-position: center 20%;
+  aspect-ratio: 4 / 5;          // mobile & tablet stabil
+  min-height: 320px;
+}
+
+@media (min-width: 992px){
+  .hero-media-img{
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 100%;
+  }
 }
 
 .hero-tag {
@@ -56,29 +113,14 @@
   font-weight: 500;
 }
 
-.hero-title {
-  @include font-size-token("lg");
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  hyphens: none;
-  word-break: normal;
+.hero-title{
+  font-size: clamp(2rem, 3vw + 1rem, 4rem);
+
 }
 
-@media (min-width: 576px) {
-  .hero-title {
-    @include font-size-token("xl");
-  }
-}
-
-@media (min-width: 768px) {
-  .hero-title {
-    @include font-size-token("xxl");
-  }
-}
-
-@media (min-width: 992px) {
-  .hero-title {
-    @include font-size-token("xxxl");
+@media (min-width: 992px){
+  .hero-title{
+    font-size: clamp(3rem, 2.2vw + 1.4rem, 4.6rem);
   }
 }
 
@@ -160,6 +202,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  object-position: center 20%;
   padding: 0;
   border: 5px solid rgba(255, 255, 255, 0.9);
   background-color: transparent;

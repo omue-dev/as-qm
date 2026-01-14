@@ -3,12 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <meta name="description" content="Kontakt zu Andreas Strauchen für Food-Qualitätsmanagement, HACCP Beratung, Lebensmittelaudits, Lebensmittelsicherheit und Schulungen.">
-    <title>Kontakt für HACCP Beratung &amp; Lebensmittelaudits | Andreas Strauchen</title>
+    <meta name="description" content="Kontakt zu Andreas Strauchen: Professionelle QM Beratung, HACCP Berater für Lebensmittelsicherheit. Bundesweit verfügbar. Jetzt unverbindlich anfragen.">
+    <meta name="keywords" content="QM Beratung Kontakt, HACCP Berater kontaktieren, Lebensmittelsicherheit Beratung, QM Lebensmittel Anfrage, Andreas Strauchen kontaktieren, Food Safety Berater">
+    <title>Kontakt: QM Beratung & HACCP Berater | Andreas Strauchen</title>
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
-    <header class="hero hero--qm">
+    <header class="hero hero--kontakt">
       <nav class="navbar-liquid" role="navigation" aria-label="Main Navigation">
   <!-- Desktop: Floating Left Rail -->
   <div class="nav-rail">
@@ -47,7 +48,7 @@
         </a>
       </li>
       <li class="nav-item" data-nav="services">
-        <a href="index.html#solutions" class="nav-link" aria-label="Leistungen">
+        <a href="leistungen.html" class="nav-link" aria-label="Leistungen">
           <div class="nav-icon-wrapper">
             <i class="fas fa-tasks nav-icon" aria-hidden="true"></i>
             <div class="icon-glow"></div>
@@ -97,7 +98,7 @@
           </div>
           <span class="dock-label">Philosophie</span>
         </a>
-        <a href="index.html#solutions" class="dock-item">
+        <a href="leistungen.html" class="dock-item">
           <div class="dock-icon-wrapper">
             <i class="fas fa-tasks"></i>
           </div>
@@ -151,108 +152,17 @@
 
 
       <div class="container hero-body" id="start">
-        <div class="contact-hero">
-
-            <span class="contact-hero-tag">Schreiben Sie mir</span>
-            <h1>Kontakt aufnehmen</h1>
-            <p>Food-Qualitätsmanagement, HACCP Beratung, Lebensmittelaudits und Schulungen aus einer Hand.</p>
-
-        </div>
-
-        <div class="row g-5 align-items-start mt-4">
-          <div class="col-lg-6">
-            <div class="contact-card">
-              <h2 class="contact-title">Lassen Sie uns sprechen</h2>
-              <p class="text-muted">
-                Nutzen Sie das Formular oder die Kontaktdaten. Andreas Strauchen meldet sich zeitnah mit einer
-                praxisnahen Einschätzung zu Ihrem QM Lebensmittel, HACCP Konzept oder Lebensmittelsicherheit-Thema.
+        <div class="row hero-row align-items-stretch gy-5 gx-5">
+          <div class="col-lg-12">
+            <div class="kontakt-hero-header">
+              <span class="hero-tag">Kontakt aufnehmen</span>
+              <h1 class="hero-title mt-4 text-white">
+                Lassen Sie uns über Ihr Qualitätsmanagement sprechen
+              </h1>
+              <p class="lead text-muted-strong mt-4">
+                Egal ob HACCP-Implementierung, Audit-Vorbereitung oder QM-Software:
+                Ich melde mich zeitnah mit konkreten Lösungsansätzen für Ihren Betrieb.
               </p>
-              <p class="text-muted">
-                Ob HACCP Schulung, Lebensmittelaudit Checkliste oder Unterstützung bei der Auditvorbereitung:
-                Sie erhalten konkrete Schritte und klare Prioritäten für Ihren Betrieb.
-              </p>
-              <form action="send.php" method="post" id="contact-form">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <label class="form-label" for="firstName">Vorname</label>
-                    <input class="form-control" id="firstName" name="firstName" type="text" placeholder="Vorname" required="">
-                  </div>
-                  <div class="col-md-6">
-                    <label class="form-label" for="lastName">Nachname</label>
-                    <input class="form-control" id="lastName" name="lastName" type="text" placeholder="Nachname" required="">
-                  </div>
-                  <div class="col-12">
-                    <label class="form-label" for="email">E-Mail</label>
-                    <input class="form-control" id="email" name="email" type="email" placeholder="name@unternehmen.de" required="">
-                  </div>
-                  <div class="col-12">
-                    <label class="form-label" for="message">Nachricht</label>
-                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Worum geht es?" required=""></textarea>
-                  </div>
-                </div>
-                <div class="alert alert-success d-none mt-3" id="formSuccess" role="alert">
-                  Vielen Dank! Ihre Anfrage wurde erfolgreich versendet.
-                </div>
-                <div class="alert alert-danger d-none mt-3" id="formError" role="alert">
-                  Es gab ein Problem beim Senden. Bitte pruefen Sie Ihre Angaben oder versuchen Sie es spaeter erneut.
-                </div>
-                <div class="d-none">
-                  <label class="form-label" for="company">Firma</label>
-                  <input class="form-control" id="company" name="company" type="text" autocomplete="off">
-                </div>
-                <input type="hidden" id="formStarted" name="formStarted" value="">
-                <div class="form-check mt-3">
-                  <input class="form-check-input" type="checkbox" id="consent" name="consent" required="">
-                  <label class="form-check-label" for="consent">
-                    Ich stimme zu, dass meine Daten zur Bearbeitung der Anfrage gespeichert werden.
-                  </label>
-                </div>
-                <div class="mt-3">
-                  <div class="g-recaptcha" data-sitekey="BITTE_SITE_KEY_EINTRAGEN"></div>
-                  <div class="form-text text-muted mt-2">
-                    reCAPTCHA aktivieren: Site Key in `src/.env` eintragen und hier ersetzen.
-                  </div>
-                </div>
-                <p class="small text-muted mt-3">
-                  Mit dem Absenden akzeptieren Sie die Datenschutzhinweise von A&amp;S QM Beratung.
-                </p>
-                <button class="btn btn-primary btn-lg mt-2" type="submit">
-                  Unverbindliches Erstgespräch vereinbaren
-                </button>
-              </form>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="contact-side">
-              <div class="contact-image-card">
-                <img src="assets/img/andreas-strauchan-inhaber-qm-beratung-lebensmittel.webp" alt="Andreas Strauchen">
-              </div>
-              <div class="contact-info-card">
-                <h5 class="mb-3">Direktkontakt</h5>
-                <ul class="list-unstyled contact-info-list">
-                  <li>
-                    <i class="fa-solid fa-phone"></i>
-                    <span>02434 / 30 88 750</span>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <span>0152 / 01 76 67 87</span>
-                  </li>
-                  <li>
-                    <i class="fa-solid fa-envelope"></i>
-                    <span>info@as-qm.de</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="contact-social">
-                <div class="contact-social-title">Folgen Sie A&amp;S QM Beratung</div>
-                <div class="contact-social-links">
-                  <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                  <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -260,40 +170,318 @@
     </header>
 
     <main>
-      <section class="section-spacing contact-body" id="referenzen">
+      <!-- Main Contact Section -->
+      <section class="py-section kontakt-main" id="contact-form">
         <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-10 text-center">
-              <h2 class="text-strong"><strong>Referenzen aus der Lebensmittelindustrie</strong></h2>
-              <p class="text-muted mt-3">
-                Auswahl zufriedener Kunden aus QM Lebensmittel, HACCP und Lebensmittelsicherheit.
-                (Dummy-Daten zur Darstellung der Struktur.)
-              </p>
+          <div class="row g-5 align-items-start">
+            <!-- Contact Form -->
+            <div class="col-lg-7 order-2 order-lg-1">
+              <div class="kontakt-form-wrapper">
+                <div class="kontakt-form-header mb-5">
+                  <h2 class="text-strong mb-4">
+                    <strong>Unverbindliche Anfrage senden</strong>
+                  </h2>
+                  <div class="kontakt-response-time">
+                    <div class="response-indicator">
+                      <span class="response-dot"></span>
+                      <span class="response-text">Antwort innerhalb von 24 Stunden</span>
+                    </div>
+                  </div>
+                </div>
+
+                <form action="send.php" method="post" id="contact-form" class="kontakt-form">
+                  <div class="form-progress">
+                    <div class="form-progress-bar" id="formProgress"></div>
+                  </div>
+
+                  <div class="row g-4">
+                    <!-- Name Fields -->
+                    <div class="col-md-6">
+                      <div class="form-group-enhanced">
+                        <label class="form-label" for="firstName">
+                          <i class="fa-solid fa-user"></i>
+                          Vorname
+                        </label>
+                        <input class="form-control-enhanced" id="firstName" name="firstName" type="text" placeholder="Ihr Vorname" required="">
+                        <div class="form-field-indicator"></div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group-enhanced">
+                        <label class="form-label" for="lastName">
+                          <i class="fa-solid fa-user"></i>
+                          Nachname
+                        </label>
+                        <input class="form-control-enhanced" id="lastName" name="lastName" type="text" placeholder="Ihr Nachname" required="">
+                        <div class="form-field-indicator"></div>
+                      </div>
+                    </div>
+
+                    <!-- Company -->
+                    <div class="col-12">
+                      <div class="form-group-enhanced">
+                        <label class="form-label" for="companyField">
+                          <i class="fa-solid fa-building"></i>
+                          Unternehmen
+                        </label>
+                        <input class="form-control-enhanced" id="companyField" name="companyField" type="text" placeholder="Ihr Unternehmen">
+                        <div class="form-field-indicator"></div>
+                      </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="col-md-6">
+                      <div class="form-group-enhanced">
+                        <label class="form-label" for="email">
+                          <i class="fa-solid fa-envelope"></i>
+                          E-Mail-Adresse
+                        </label>
+                        <input class="form-control-enhanced" id="email" name="email" type="email" placeholder="name@unternehmen.de" required="">
+                        <div class="form-field-indicator"></div>
+                      </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="col-md-6">
+                      <div class="form-group-enhanced">
+                        <label class="form-label" for="phone">
+                          <i class="fa-solid fa-phone"></i>
+                          Telefon
+                        </label>
+                        <input class="form-control-enhanced" id="phone" name="phone" type="tel" placeholder="+49 123 456789">
+                        <div class="form-field-indicator"></div>
+                      </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="col-12">
+                      <div class="form-group-enhanced">
+                        <label class="form-label" for="message">
+                          <i class="fa-solid fa-message"></i>
+                          Ihre Nachricht
+                        </label>
+                        <textarea class="form-control-enhanced" id="message" name="message" rows="6" placeholder="Beschreiben Sie Ihr Anliegen: Welche Unterstützung benötigen Sie? Steht ein Audit an? Wie sieht Ihre aktuelle Situation aus?" required=""></textarea>
+                        <div class="form-field-indicator"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Honeypot -->
+                  <div class="d-none">
+                    <label class="form-label" for="company">Firma (nicht ausfüllen)</label>
+                    <input class="form-control" id="company" name="company" type="text" autocomplete="off">
+                  </div>
+                  <input type="hidden" id="formStarted" name="formStarted" value="">
+
+                  <!-- Consent -->
+                  <div class="form-check-enhanced mt-4">
+                    <input class="form-check-input" type="checkbox" id="consent" name="consent" required="">
+                    <label class="form-check-label" for="consent">
+                      Ich stimme zu, dass meine Daten zur Bearbeitung der Anfrage gespeichert werden.
+                      Details in der <a href="index.html#datenschutz">Datenschutzerklärung</a>.
+                    </label>
+                  </div>
+
+                  <!-- Alerts -->
+                  <div class="alert alert-success d-none mt-4" id="formSuccess" role="alert">
+                    <i class="fa-solid fa-circle-check me-2"></i>
+                    <strong>Vielen Dank!</strong> Ihre Anfrage wurde erfolgreich versendet.
+                  </div>
+                  <div class="alert alert-danger d-none mt-4" id="formError" role="alert">
+                    <i class="fa-solid fa-circle-exclamation me-2"></i>
+                    <strong>Fehler:</strong> <span id="errorMessage">Es gab ein Problem beim Senden.</span>
+                  </div>
+
+                  <!-- Submit Button -->
+                  <button class="btn btn-primary btn-lg mt-4 kontakt-submit-btn" type="submit">
+                    <span class="btn-text">
+                      <i class="fa-solid fa-paper-plane me-2"></i>
+                      Anfrage senden
+                    </span>
+                    <span class="btn-loading d-none">
+                      <i class="fa-solid fa-spinner fa-spin me-2"></i>
+                      Wird gesendet...
+                    </span>
+                  </button>
+
+                  <p class="small text-muted mt-3">
+                    Mit dem Absenden akzeptieren Sie die Datenschutzhinweise von A&S QM Beratung.
+                  </p>
+                </form>
+              </div>
+            </div>
+
+            <!-- Contact Info Sidebar -->
+            <div class="col-lg-5 order-1 order-lg-2">
+              <div class="kontakt-sidebar">
+                <!-- Quick Contact Cards -->
+                <div class="kontakt-info-grid">
+                  <div class="kontakt-info-card kontakt-info-card--phone">
+                    <div class="info-card-icon">
+                      <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="info-card-content">
+                      <h3 class="h6 mb-2">Telefon (Festnetz)</h3>
+                      <a href="tel:+4924343088750" class="info-card-link">
+                        02434 / 30 88 750
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="kontakt-info-card kontakt-info-card--mobile">
+                    <div class="info-card-icon">
+                      <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <div class="info-card-content">
+                      <h3 class="h6 mb-2">Mobil</h3>
+                      <a href="tel:+4915201766787" class="info-card-link">
+                        0152 / 01 76 67 87
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="kontakt-info-card kontakt-info-card--email">
+                    <div class="info-card-icon">
+                      <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="info-card-content">
+                      <h3 class="h6 mb-2">E-Mail</h3>
+                      <a href="mailto:info@as-qm.de" class="info-card-link">
+                        info@as-qm.de
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="kontakt-info-card kontakt-info-card--location">
+                    <div class="info-card-icon">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="info-card-content">
+                      <h3 class="h6 mb-2">Verfügbarkeit</h3>
+                      <p class="mb-0">Bundesweit im Einsatz</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- About Andreas -->
+                <div class="kontakt-about-card mt-4">
+                  <div class="kontakt-about-image">
+                    <img src="assets/img/andreas-strauchen-inhaber-as-qm-footer-grafik.webp" alt="Andreas Strauchen - QM Berater und HACCP Experte" class="img-fluid">
+                  </div>
+                  <div class="kontakt-about-content">
+                    <h3 class="h5 mb-3">Andreas Strauchen</h3>
+                    <p class="mb-3">
+                      Qualitätsmanager und HACCP-Experte mit über 15 Jahren Erfahrung
+                      in der Lebensmittelindustrie. Hands-on Unterstützung von der
+                      Analyse bis zur Zertifizierung.
+                    </p>
+                    <div class="kontakt-badges">
+                      <span class="kontakt-badge">IFS Berater</span>
+                      <span class="kontakt-badge">HACCP Experte</span>
+                      <span class="kontakt-badge">Interner Auditor</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- FAQ Quick Links -->
+                <div class="kontakt-faq-card mt-4">
+                  <h3 class="h6 mb-3">Häufige Fragen</h3>
+                  <ul class="kontakt-faq-list">
+                    <li>
+                      <i class="fa-solid fa-circle-question"></i>
+                      <span>Wie schnell erhalte ich eine Rückmeldung?<br>
+                      <span class="answer">In der Regel innerhalb von 24 Stunden (werktags)</span>
+                    </span></li>
+                    <li>
+                      <i class="fa-solid fa-circle-question"></i>
+                      <span>Ist das Erstgespräch kostenpflichtig?<br>
+                      <span class="answer">Nein, das erste Beratungsgespräch ist unverbindlich und kostenlos</span>
+                    </span></li>
+                    <li>
+                      <i class="fa-solid fa-circle-question"></i>
+                      <span>Arbeiten Sie auch remote?<br>
+                      <span class="answer">Ja, sowohl vor Ort als auch remote möglich</span>
+                    </span></li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="row g-4 mt-2">
-            <div class="col-md-4">
-              <div class="feature-card bg-white h-100">
-                <h5 class="mb-2">Nordsee Feinkost GmbH</h5>
-                <p class="text-muted mb-0">
-                  HACCP Audit begleitet und QM Lebensmittel Standards konsolidiert – Auditfähigkeit spürbar verbessert.
-                </p>
+        </div>
+      </section>
+
+      <!-- Trust Indicators -->
+      <section class="bg-section-soft py-section" id="vertrauen">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <h2 class="text-strong text-center mb-5">
+                <strong>Warum Kunden sich für A&S QM Beratung entscheiden</strong>
+              </h2>
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="trust-card">
+                    <div class="trust-icon">
+                      <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="h5 mb-3">Hands-on Mentalität</h3>
+                    <p class="mb-0">
+                      Nicht nur Theorie: Ich packe mit an und setze Lösungen gemeinsam
+                      mit Ihrem Team um.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="trust-card">
+                    <div class="trust-icon">
+                      <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h3 class="h5 mb-3">15+ Jahre Erfahrung</h3>
+                    <p class="mb-0">
+                      Langjährige Praxis in der Lebensmittelindustrie mit hunderten
+                      erfolgreich begleiteten Audits.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="trust-card">
+                    <div class="trust-icon">
+                      <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="h5 mb-3">Auditfeste Systeme</h3>
+                    <p class="mb-0">
+                      Pragmatische Lösungen, die in der Praxis funktionieren und Audits
+                      standhalten.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="feature-card bg-white h-100">
-                <h5 class="mb-2">Bergland Molkerei AG</h5>
-                <p class="text-muted mb-0">
-                  HACCP Schulung und Lebensmittelaudit Checkliste etabliert – klare Abläufe und sichere Dokumentation.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="feature-card bg-white h-100">
-                <h5 class="mb-2">Frischemarkt Rhein GmbH</h5>
-                <p class="text-muted mb-0">
-                  Lebensmittelsicherheit im Betrieb gestärkt – Risikoanalyse, Maßnahmenplan und Auditvorbereitung.
-                </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Alternative Contact Methods -->
+      <section class="py-section" id="alternative-kontakt">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <h2 class="text-strong mb-4">
+                <strong>Lieber direkt anrufen?</strong>
+              </h2>
+              <p class="lead mb-5">
+                Für dringende Anliegen oder wenn Sie lieber persönlich sprechen möchten,
+                erreichen Sie mich direkt telefonisch.
+              </p>
+              <div class="kontakt-direct-actions">
+                <a href="tel:+4924343088750" class="btn btn-lg btn-outline-primary">
+                  <i class="fa-solid fa-phone me-2"></i>
+                  02434 / 30 88 750
+                </a>
+                <a href="tel:+4915201766787" class="btn btn-lg btn-outline-primary">
+                  <i class="fa-solid fa-mobile-screen-button me-2"></i>
+                  0152 / 01 76 67 87
+                </a>
               </div>
             </div>
           </div>
@@ -303,7 +491,7 @@
 
     <footer class="footer-qm py-section" id="contact">
   <div class="container footer-container-spacious">
-    <div class="row g-5">
+    <div class="row row-spacious g-5">
       <div class="col-lg-5">
         <div class="footer-eyebrow">Andreas Strauchen</div>
         <h2 class="footer-headline">Audit &amp; Sicherheit</h2>
@@ -319,7 +507,7 @@
       </div>
       <div class="col-lg-3 text-center">
         <div class="footer-portrait-wrap">
-          <img class="img-fluid footer-portrait" src="assets/img/andreas-strauchen-inhaber-as-qm-hero-grafik.webp" alt="Andreas Strauchen">
+          <img class="img-fluid footer-portrait" src="assets/img/andreas-strauchen-inhaber-as-qm-footer-grafik.webp" alt="Andreas Strauchen">
         </div>
       </div>
       <div class="col-lg-4">
@@ -351,38 +539,103 @@
 </footer>
 
 
-    <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
     <script>
+      // Form started timestamp
       (function () {
         var formStarted = document.getElementById('formStarted');
         if (formStarted) {
           formStarted.value = Math.floor(Date.now() / 1000);
         }
+      })();
 
+      // Form progress tracking
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contact-form');
+        const progressBar = document.getElementById('formProgress');
+
+        if (form && progressBar) {
+          const requiredFields = form.querySelectorAll('[required]');
+
+          function updateProgress() {
+            let filled = 0;
+            requiredFields.forEach(field => {
+              if (field.type === 'checkbox') {
+                if (field.checked) filled++;
+              } else {
+                if (field.value.trim() !== '') filled++;
+              }
+            });
+            const progress = (filled / requiredFields.length) * 100;
+            progressBar.style.width = progress + '%';
+          }
+
+          requiredFields.forEach(field => {
+            field.addEventListener('input', updateProgress);
+            field.addEventListener('change', updateProgress);
+          });
+        }
+      });
+
+      // Enhanced form field interactions
+      document.addEventListener('DOMContentLoaded', function() {
+        const formGroups = document.querySelectorAll('.form-group-enhanced');
+
+        formGroups.forEach(group => {
+          const input = group.querySelector('.form-control-enhanced');
+          const indicator = group.querySelector('.form-field-indicator');
+
+          if (input && indicator) {
+            input.addEventListener('focus', () => {
+              group.classList.add('focused');
+            });
+
+            input.addEventListener('blur', () => {
+              group.classList.remove('focused');
+              if (input.value.trim() !== '') {
+                group.classList.add('filled');
+              } else {
+                group.classList.remove('filled');
+              }
+            });
+
+            input.addEventListener('input', () => {
+              if (input.value.trim() !== '') {
+                group.classList.add('filled');
+              } else {
+                group.classList.remove('filled');
+              }
+            });
+          }
+        });
+      });
+
+      // Handle form submission feedback
+      (function () {
         var params = new URLSearchParams(window.location.search);
         var status = params.get('status');
         var code = params.get('code');
         var success = document.getElementById('formSuccess');
         var error = document.getElementById('formError');
+        var errorMessage = document.getElementById('errorMessage');
 
         if (status === 'success' && success) {
           success.classList.remove('d-none');
+          // Scroll to success message
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
-        if (status === 'error' && error) {
+        if (status === 'error' && error && errorMessage) {
           var messages = {
-            missing: 'Bitte alle Pflichtfelder ausfuellen und die Einwilligung bestaetigen.',
-            email: 'Bitte eine gueltige E-Mail-Adresse eingeben.',
-            recaptcha: 'Bitte bestaetigen Sie das reCAPTCHA.',
-            spam: 'Bitte senden Sie das Formular erneut.',
-            send: 'Senden fehlgeschlagen. Bitte spaeter erneut versuchen.'
+            missing: 'Bitte füllen Sie alle Pflichtfelder aus und bestätigen Sie die Einwilligung.',
+            email: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+            recaptcha: 'Bitte bestätigen Sie das reCAPTCHA.',
+            spam: 'Ihre Anfrage wurde als Spam erkannt. Bitte versuchen Sie es erneut.',
+            send: 'Senden fehlgeschlagen. Bitte versuchen Sie es später erneut.'
           };
-          if (messages[code]) {
-            error.textContent = messages[code];
-          }
+          errorMessage.textContent = messages[code] || messages.send;
           error.classList.remove('d-none');
+          // Scroll to error message
+          error.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
       })();
     </script>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Professionelle QM Lebensmittel Beratung: HACCP-Implementierung, Lebensmittelaudits, QM-Software, Schulungen und Dokumentation. Hands-on Unterstützung bundesweit."
+    />
+    <meta
+      name="keywords"
+      content="QM Lebensmittel, Lebensmittelaudits, HACCP Implementierung, HACCP Schulung, QM-Software Lebensmittel, Lebensmittelsicherheit, Food Safety, IFS Beratung, FSSC 22000, QS Standard"
+    />
+    <title>Leistungen: QM Lebensmittel & Lebensmittelaudits | Andreas Strauchen</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <header class="hero hero--leistungen">
+      <include src="partials/navbar.html"></include>
+      <div class="container hero-body" id="start">
+        <div class="row hero-row align-items-center gy-5 gx-5">
+          <div class="col-lg-7 order-2 order-lg-1 pe-lg-5 pe-xl-5">
+            <span class="hero-tag">Leistungen - A&S Audit und Sicherheit</span>
+            <h1 class="hero-title mt-4 text-white">
+              Professionelles QM Lebensmittel: Von der Analyse bis zur Zertifizierung
+            </h1>
+            <p class="lead text-muted-strong mt-4">
+              Praxisnahe Unterstützung bei HACCP-Implementierung, Lebensmittelaudits und
+              QM-Software. Ich zeige Schwachstellen auf und setze Lösungen gemeinsam mit
+              Ihrem Team um – pragmatisch, verständlich und auditfest.
+            </p>
+            <div class="d-flex flex-wrap gap-4 mt-5">
+              <a class="btn btn-primary btn-hero-primary" href="kontakt.html">
+                <i class="fa-solid fa-calendar-check me-2"></i>
+                Unverbindliches Erstgespräch vereinbaren
+              </a>
+              <a class="btn btn-outline-light btn-hero-outline" href="#services-overview">
+                <i class="fa-solid fa-arrow-down me-2"></i>
+                Leistungen im Detail
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5 order-1 order-lg-2 ps-lg-5 ps-xl-5">
+            <div class="leistungen-hero-stats">
+              <div class="leistungen-stat-card">
+                <div class="leistungen-stat-number">15+</div>
+                <div class="leistungen-stat-label">Jahre Erfahrung</div>
+              </div>
+              <div class="leistungen-stat-card">
+                <div class="leistungen-stat-number">100%</div>
+                <div class="leistungen-stat-label">Hands-on Beratung</div>
+              </div>
+              <div class="leistungen-stat-card">
+                <div class="leistungen-stat-number">5</div>
+                <div class="leistungen-stat-label">Kern-Leistungen</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="py-section" id="services-overview">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="text-strong text-center mb-5">
+              <strong>Meine Leistungen für QM Lebensmittel und Lebensmittelsicherheit</strong>
+            </h2>
+            <p class="h5 text-center text-muted-strong mb-4">
+              Fünf Kernbereiche, die Ihr Qualitätsmanagement nachhaltig stärken
+            </p>
+
+            <div class="row g-4 mt-5">
+              <!-- Service 1: HACCP Implementation -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100">
+                  <div class="service-card-icon">
+                    <i class="fa-solid fa-diagram-project"></i>
+                  </div>
+                  <h3 class="h5 mb-3">HACCP-Konzepte entwickeln und implementieren</h3>
+                  <p class="mb-4">
+                    Aufbau und Optimierung Ihres HACCP-Systems nach aktuellen Standards.
+                    Von der Gefahrenanalyse über die Definition kritischer Lenkungspunkte
+                    bis zur praktischen Umsetzung im Betrieb.
+                  </p>
+                  <ul class="service-list mb-4">
+                    <li><i class="fa-solid fa-check"></i> Gefahrenanalyse und Risikoabschätzung</li>
+                    <li><i class="fa-solid fa-check"></i> CCP-Festlegung und Grenzwertdefinition</li>
+                    <li><i class="fa-solid fa-check"></i> Überwachungs- und Korrekturmaßnahmen</li>
+                    <li><i class="fa-solid fa-check"></i> Verifizierung und Dokumentation</li>
+                  </ul>
+                  <div class="service-card-footer">
+                    <span class="service-badge">HACCP</span>
+                    <span class="service-badge">Food Safety</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 2: Food Audits -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card service-card--featured h-100">
+                  <div class="service-card-badge">Beliebt</div>
+                  <div class="service-card-icon">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                  </div>
+                  <h3 class="h5 mb-3">Lebensmittelaudits und Zertifizierungsvorbereitung</h3>
+                  <p class="mb-4">
+                    Interne Audits zur Vorbereitung auf IFS, FSSC 22000, BRC oder QS.
+                    Identifikation von Abweichungen und konkrete Handlungsempfehlungen
+                    für ein erfolgreiches Audit.
+                  </p>
+                  <ul class="service-list mb-4">
+                    <li><i class="fa-solid fa-check"></i> Pre-Audits nach IFS, FSSC, BRC, QS</li>
+                    <li><i class="fa-solid fa-check"></i> Gap-Analysen und Schwachstellenidentifikation</li>
+                    <li><i class="fa-solid fa-check"></i> Maßnahmenpläne mit Priorisierung</li>
+                    <li><i class="fa-solid fa-check"></i> Begleitung während der Zertifizierung</li>
+                  </ul>
+                  <div class="service-card-footer">
+                    <span class="service-badge">IFS</span>
+                    <span class="service-badge">FSSC 22000</span>
+                    <span class="service-badge">BRC</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 3: QM Software -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100">
+                  <div class="service-card-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                  </div>
+                  <h3 class="h5 mb-3">QM-Software Lebensmittel: Auswahl und Einführung</h3>
+                  <p class="mb-4">
+                    Beratung bei der Auswahl passender QM-Software für Ihre Anforderungen.
+                    Unterstützung bei der Implementierung und Schulung Ihrer Mitarbeiter
+                    für einen effizienten Workflow.
+                  </p>
+                  <ul class="service-list mb-4">
+                    <li><i class="fa-solid fa-check"></i> Anforderungsanalyse und Software-Auswahl</li>
+                    <li><i class="fa-solid fa-check"></i> Prozessdigitalisierung und Systemintegration</li>
+                    <li><i class="fa-solid fa-check"></i> Schulung und Change Management</li>
+                    <li><i class="fa-solid fa-check"></i> Optimierung bestehender Systeme</li>
+                  </ul>
+                  <div class="service-card-footer">
+                    <span class="service-badge">Digitalisierung</span>
+                    <span class="service-badge">Software</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 4: Training & Coaching -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100">
+                  <div class="service-card-icon">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                  </div>
+                  <h3 class="h5 mb-3">HACCP Schulung und Mitarbeitertraining</h3>
+                  <p class="mb-4">
+                    Praxisorientierte Schulungen zu HACCP, Hygiene und Lebensmittelsicherheit.
+                    Individuell angepasst an Ihre Betriebsabläufe und verständlich für alle
+                    Hierarchieebenen.
+                  </p>
+                  <ul class="service-list mb-4">
+                    <li><i class="fa-solid fa-check"></i> HACCP-Grundlagenschulungen</li>
+                    <li><i class="fa-solid fa-check"></i> Hygiene- und Food-Defense-Trainings</li>
+                    <li><i class="fa-solid fa-check"></i> Interne Auditor-Ausbildung</li>
+                    <li><i class="fa-solid fa-check"></i> Individuelle Workshops für Ihr Team</li>
+                  </ul>
+                  <div class="service-card-footer">
+                    <span class="service-badge">Schulung</span>
+                    <span class="service-badge">Training</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 5: Documentation -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100">
+                  <div class="service-card-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                  </div>
+                  <h3 class="h5 mb-3">QM-Dokumentation erstellen und optimieren</h3>
+                  <p class="mb-4">
+                    Erstellung und Aktualisierung Ihrer QM-Dokumentation: Handbücher,
+                    Verfahrensanweisungen, Arbeitsanweisungen und Formblätter.
+                    Praxisnah, verständlich und auditfest.
+                  </p>
+                  <ul class="service-list mb-4">
+                    <li><i class="fa-solid fa-check"></i> QM-Handbücher und Prozessbeschreibungen</li>
+                    <li><i class="fa-solid fa-check"></i> Arbeitsanweisungen und Checklisten</li>
+                    <li><i class="fa-solid fa-check"></i> Nachweisdokumentation und Formblätter</li>
+                    <li><i class="fa-solid fa-check"></i> Dokumentenstruktur und -management</li>
+                  </ul>
+                  <div class="service-card-footer">
+                    <span class="service-badge">Dokumentation</span>
+                    <span class="service-badge">Standards</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 6: Individual Support -->
+              <div class="col-md-6 col-lg-4">
+                <div class="service-card h-100">
+                  <div class="service-card-icon">
+                    <i class="fa-solid fa-handshake"></i>
+                  </div>
+                  <h3 class="h5 mb-3">Individuelle Beratung und Projektbegleitung</h3>
+                  <p class="mb-4">
+                    Sie haben spezifische Anforderungen oder ein konkretes Projekt?
+                    Ich unterstütze Sie flexibel und hands-on bei allen Themen rund um
+                    QM Lebensmittel und Lebensmittelqualität.
+                  </p>
+                  <ul class="service-list mb-4">
+                    <li><i class="fa-solid fa-check"></i> Food Fraud und Food Defense Konzepte</li>
+                    <li><i class="fa-solid fa-check"></i> Allergen- und Rückverfolgbarkeitsmanagement</li>
+                    <li><i class="fa-solid fa-check"></i> Lieferantenaudits und -bewertungen</li>
+                    <li><i class="fa-solid fa-check"></i> Krisenmanagement und Rückrufprozesse</li>
+                  </ul>
+                  <div class="service-card-footer">
+                    <span class="service-badge">Individuell</span>
+                    <span class="service-badge">Flexibel</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-section-soft py-section" id="approach">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <h2 class="text-strong text-center mb-5">
+              <strong>Mein Ansatz: Praktisch, verständlich, nachhaltig</strong>
+            </h2>
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="approach-card">
+                  <div class="approach-number">01</div>
+                  <h3 class="h5 mb-4">Analyse und Bestandsaufnahme</h3>
+                  <p class="mb-0">
+                    Systematische Erfassung Ihrer aktuellen Situation: Welche Prozesse
+                    laufen bereits? Wo gibt es Lücken? Was sind die kritischen Punkte
+                    für das anstehende Audit?
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="approach-card">
+                  <div class="approach-number">02</div>
+                  <h3 class="h5 mb-4">Konzeption und Planung</h3>
+                  <p class="mb-0">
+                    Entwicklung eines klaren Maßnahmenplans mit Prioritäten.
+                    Keine theoretischen Idealkonzepte, sondern pragmatische Lösungen,
+                    die in Ihrem Betrieb funktionieren.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="approach-card">
+                  <div class="approach-number">03</div>
+                  <h3 class="h5 mb-4">Umsetzung und Begleitung</h3>
+                  <p class="mb-0">
+                    Hands-on Unterstützung bei der Implementierung. Schulung Ihrer
+                    Mitarbeiter vor Ort. Begleitung bis zur erfolgreichen Zertifizierung
+                    und darüber hinaus.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-section" id="standards">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <h2 class="text-strong mb-5">
+              <strong>Standards und Zertifizierungen</strong>
+            </h2>
+            <p class="mb-4">
+              Ich unterstütze Sie bei der Vorbereitung und Umsetzung aller relevanten
+              Standards im Bereich QM Lebensmittel und Lebensmittelsicherheit.
+              Mein Fokus: auditfeste Systeme, die in der Praxis funktionieren.
+            </p>
+            <p class="mb-4">
+              <strong>Langjährige Erfahrung mit:</strong> IFS Food, FSSC 22000,
+              BRC Food Safety, QS Standard, Bio-Zertifizierungen, ISO 9001 und
+              betriebsspezifischen Hygiene- und Qualitätsstandards.
+            </p>
+            <a class="btn btn-primary mt-3" href="kontakt.html">
+              <i class="fa-solid fa-comments me-2"></i>
+              Jetzt beraten lassen
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <div class="standards-grid">
+              <div class="standard-badge">IFS Food</div>
+              <div class="standard-badge">FSSC 22000</div>
+              <div class="standard-badge">BRC</div>
+              <div class="standard-badge">QS Standard</div>
+              <div class="standard-badge">ISO 9001</div>
+              <div class="standard-badge">Bio-Zertifizierung</div>
+              <div class="standard-badge">HACCP</div>
+              <div class="standard-badge">GMP+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-section-soft py-section" id="cta">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="text-strong mb-5">
+              <strong>Bereit für professionelles QM Lebensmittel?</strong>
+            </h2>
+            <p class="lead mb-4">
+              Lassen Sie uns gemeinsam Ihr Qualitätsmanagement auf ein auditfestes
+              Niveau bringen. Kontaktieren Sie mich für ein unverbindliches Erstgespräch.
+            </p>
+            <div class="d-flex flex-column flex-sm-row justify-content-center gap-4 mt-5">
+              <a class="btn btn-primary btn-lg" href="kontakt.html">
+                <i class="fa-solid fa-calendar-check me-2"></i>
+                Unverbindliches Erstgespräch vereinbaren
+              </a>
+              <a class="btn btn-outline-primary btn-lg" href="philosophie.html">
+                <i class="fa-solid fa-lightbulb me-2"></i>
+                Mehr über meine Philosophie
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <include src="partials/footer.html"></include>
+  </body>
+</html>

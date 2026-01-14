@@ -25,3 +25,66 @@
   margin-top: $spacer * 1.2; // 1.2rem
   font-size: 2rem;
 }
+
+// ============================================================================
+// SERVICE CARD COMPONENT
+// ============================================================================
+// Reusable service card with icon container, title, and description
+// Uses $spacer scale for all spacing values (mobile-first responsive)
+// ============================================================================
+
+.service-card {
+  background: #ffffff;
+  padding: $spacer * 1.5; // Mobile: 24px (1.5rem)
+  border-radius: $border-radius-lg; // Bootstrap standard: 1.25rem
+  @include shadow-token("card");
+  transition: box-shadow 0.3s ease;
+
+  // Responsive: Desktop larger padding
+  @media (min-width: 992px) {
+    padding: $spacer * 2; // Desktop: 32px (2rem)
+  }
+
+  // Hover state: slightly elevated shadow
+  &:hover {
+    @include shadow-token("light");
+  }
+
+  // Icon container
+  .service-card__icon {
+    width: $spacer * 4; // 64px (4rem)
+    height: $spacer * 4; // 64px (4rem)
+    background: rgba(43, 108, 246, 0.1); // primary color, light
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: $spacer * 1.5; // 24px
+
+    // Icon styling (FontAwesome)
+    i, svg {
+      color: $color-primary;
+      font-size: 1.75rem;
+    }
+  }
+
+  // Title (h5)
+  .service-card__title,
+  h5 {
+    margin-bottom: $spacer; // 16px
+    color: $color-ink;
+  }
+
+  // Description text
+  .service-card__text,
+  p {
+    @include color("color", "muted");
+    margin-bottom: $spacer * 1.5; // 24px
+    font-size: 0.95rem;
+
+    // Last paragraph: no bottom margin
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

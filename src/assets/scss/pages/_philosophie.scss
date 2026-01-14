@@ -24,6 +24,7 @@
   min-height: 65vh;
   position: relative;
   overflow: hidden;
+  padding: $spacer 0 $spacer * 5.5; // Consistent bottom padding across all heroes
 
   // Subtle overlay for depth
   &::before {
