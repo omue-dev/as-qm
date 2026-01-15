@@ -92,7 +92,7 @@
           </div>
           <span class="dock-label">Leistungen</span>
         </a>
-        <a href="ueber-mich.html" class="dock-item">
+        <a href="index.html#approach" class="dock-item">
           <div class="dock-icon-wrapper">
             <i class="fas fa-user"></i>
           </div>
