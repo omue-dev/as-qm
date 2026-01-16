@@ -101,16 +101,66 @@
 }
 
 .hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.35rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  @include color(color, "text-on-dark-muted");
-  background: rgba(10, 24, 48, 0.6);
-  @include font-size-token("xs");
+  display: inline-block;
+  padding: 0.35rem 0;
+  border-radius: 10px;
+  font-size: 1rem;
+  line-height: 1.3rem;
   font-weight: 500;
+}
+
+.hero-tag--brand {
+  display: inline-grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 0.9rem;
+  align-items: center;
+  padding: 0.5rem 0.9rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.hero-tag--brand .hero-tag__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.hero-tag--brand .hero-tag__text > span:first-of-type {
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  letter-spacing: 0.02em;
+}
+
+.hero-tag--brand .hero-tag__text > span:last-of-type {
+  margin-top:10px;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.hero-tag--brand i {
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.015em;
+}
+
+.hero-tag--brand .brand-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 14px;
+  padding: 6px;
+  background:
+    gradient-token("hero-glow"),
+    gradient-token("hero-depth"),
+    gradient-token("hero-base");
+  object-fit: contain;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  align-self: center;
 }
 
 .hero-title{
