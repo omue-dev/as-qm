@@ -10,17 +10,17 @@
 // CSS Custom Properties
 :root {
   --nav-width: 100px;
-  --nav-bg: rgba(11, 16, 32, 0.85);
-  --nav-glass: rgba(15, 27, 51, 0.6);
-  --nav-glass-mobile: rgba(11, 16, 32, 0.92);
-  --nav-border: rgba(43, 108, 246, 0.15);
-  --nav-border-bright: rgba(43, 108, 246, 0.5);
-  --nav-glow: rgba(43, 108, 246, 0.4);
-  --nav-glow-bright: rgba(43, 108, 246, 0.8);
-  --nav-glow-intense: rgba(43, 108, 246, 1);
+  --nav-bg: rgba(11, 32, 15, 0.85);
+  --nav-glass: rgba(15, 51, 27, 0.6);
+  --nav-glass-mobile: rgba(11, 32, 15, 0.92);
+  --nav-border: rgba(120, 183, 76, 0.15);
+  --nav-border-bright: rgba(120, 183, 76, 0.5);
+  --nav-glow: rgba(120, 183, 76, 0.4);
+  --nav-glow-bright: rgba(120, 183, 76, 0.8);
+  --nav-glow-intense: rgba(120, 183, 76, 1);
   --nav-text: rgba(255, 255, 255, 0.85);
   --nav-text-hover: rgba(255, 255, 255, 1);
-  --nav-active: #2b6cf6;
+  --nav-active: #78B74C;
   --nav-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   --nav-transition: cubic-bezier(0.4, 0, 0.2, 1);
   --nav-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -79,7 +79,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.5rem 0;
+  padding: $spacer * 1.5 0;
   z-index: 1000;
   overflow: hidden;
 
@@ -89,9 +89,9 @@
     inset: 0;
     background: linear-gradient(
       180deg,
-      rgba(43, 108, 246, 0.05) 0%,
+      rgba(120, 183, 76, 0.05) 0%,
       transparent 50%,
-      rgba(43, 108, 246, 0.05) 100%
+      rgba(120, 183, 76, 0.05) 100%
     );
     pointer-events: none;
   }
@@ -145,7 +145,7 @@
   height: 45px;
   border-radius: 12px;
   transition: all 0.4s var(--nav-spring);
-  filter: drop-shadow(0 4px 12px rgba(43, 108, 246, 0.3));
+  filter: drop-shadow(0 4px 12px rgba(120, 183, 76, 0.3));
 }
 
 .brand-text {
@@ -175,14 +175,14 @@
   left: 50%;
   width: 4px;
   height: 50px;
-  background: linear-gradient(180deg, #2b6cf6 0%, #58c0ff 100%);
+  background: linear-gradient(180deg, #78B74C 0%, #A3D977 100%);
   border-radius: 0 999px 999px 0;
   transform: translateX(-50px) translateY(0);
   opacity: 0;
   transition: all 0.6s var(--nav-spring);
   box-shadow:
-    0 0 20px rgba(43, 108, 246, 0.6),
-    0 0 40px rgba(43, 108, 246, 0.3);
+    0 0 20px rgba(120, 183, 76, 0.6),
+    0 0 40px rgba(120, 183, 76, 0.3);
   animation: liquid-morph 8s ease-in-out infinite;
   pointer-events: none;
 
@@ -330,12 +330,12 @@
   margin: 1.5rem 0.75rem 1rem;
   text-decoration: none;
   color: #ffffff;
-  background: linear-gradient(135deg, #2b6cf6 0%, #1f5fe6 100%);
+  background: linear-gradient(135deg, #78B74C 0%, #5A9A2E 100%);
   border-radius: 14px;
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.05em;
-  box-shadow: 0 8px 24px rgba(43, 108, 246, 0.4);
+  box-shadow: 0 8px 24px rgba(120, 183, 76, 0.4);
   transition: all 0.4s var(--nav-spring);
   overflow: hidden;
 
@@ -355,7 +355,7 @@
 
   &:hover {
     transform: translateY(-4px) scale(1.02);
-    box-shadow: 0 12px 32px rgba(43, 108, 246, 0.6);
+    box-shadow: 0 12px 32px rgba(120, 183, 76, 0.6);
 
     &::before {
       opacity: 1;
@@ -435,8 +435,8 @@
       height: 120px;
       background: radial-gradient(
         ellipse at center bottom,
-        rgba(43, 108, 246, 0.15) 0%,
-        rgba(43, 108, 246, 0.08) 40%,
+        rgba(120, 183, 76, 0.15) 0%,
+        rgba(120, 183, 76, 0.08) 40%,
         transparent 70%
       );
       pointer-events: none;
@@ -457,7 +457,7 @@
     inset: -8px;
     background: radial-gradient(
       ellipse at center,
-      rgba(43, 108, 246, 0.12) 0%,
+      rgba(120, 183, 76, 0.12) 0%,
       transparent 70%
     );
     border-radius: 32px;
@@ -481,7 +481,7 @@
     // Additional depth layer
     0 -24px 64px rgba(0, 0, 0, 0.3),
     // Blue ambient glow
-    0 -4px 32px rgba(43, 108, 246, 0.2),
+    0 -4px 32px rgba(120, 183, 76, 0.2),
     // Inner highlight
     inset 0 1px 0 rgba(255, 255, 255, 0.15),
     // Inner shadow for depth
@@ -607,7 +607,7 @@
 
     &::before {
       opacity: 1;
-      box-shadow: 0 6px 12px rgba(43, 108, 246, 0.3);
+      box-shadow: 0 6px 12px rgba(120, 183, 76, 0.3);
     }
 
     i {
@@ -619,8 +619,8 @@
 
 .dock-item--primary {
   .dock-icon-wrapper {
-    background: linear-gradient(135deg, #2b6cf6 0%, #1f5fe6 100%);
-    box-shadow: 0 4px 16px rgba(43, 108, 246, 0.4);
+    background: linear-gradient(135deg, #78B74C 0%, #5A9A2E 100%);
+    box-shadow: 0 4px 16px rgba(120, 183, 76, 0.4);
 
     i {
       color: #ffffff;
@@ -633,7 +633,7 @@
   }
 
   &:hover .dock-icon-wrapper {
-    box-shadow: 0 8px 24px rgba(43, 108, 246, 0.6);
+    box-shadow: 0 8px 24px rgba(120, 183, 76, 0.6);
   }
 }
 
@@ -782,7 +782,7 @@
 
   &:hover {
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(43, 108, 246, 0.3);
+    border-color: rgba(120, 183, 76, 0.3);
     color: #ffffff;
     transform: translateX(4px);
 

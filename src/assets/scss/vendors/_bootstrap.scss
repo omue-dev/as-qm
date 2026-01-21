@@ -8,9 +8,22 @@ $headings-font-weight: 700;
 
 @use "../abstracts" as *;
 
-$theme-colors: map.merge($theme-colors, (
+// Bootstrap color overrides - must use Bootstrap's variable names
+$primary: #78B74C;
+$secondary: #1b4a2a;
+$info: #A3D977;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "info": $info,
+  "success": #198754,
+  "warning": #ffc107,
+  "danger": #dc3545,
+  "light": #3b6348,
+  "dark": #0b200f,
   "brand": $color-primary-600
-));
+);
 
 $input-border-radius: 0.75rem;
 $input-padding-y: 0.65rem;
@@ -26,4 +39,22 @@ $badge-font-weight: 600;
 
 $btn-border-radius: 999px;
 
-@use "../../../../node_modules/bootstrap/scss/bootstrap";
+@use "../../../../node_modules/bootstrap/scss/bootstrap" with (
+  $primary: $primary,
+  $secondary: $secondary,
+  $info: $info,
+  $theme-colors: $theme-colors,
+  $font-family-sans-serif: $font-family-sans-serif,
+  $headings-font-family: $headings-font-family,
+  $headings-font-weight: $headings-font-weight,
+  $input-border-radius: $input-border-radius,
+  $input-padding-y: $input-padding-y,
+  $input-padding-x: $input-padding-x,
+  $navbar-toggler-padding-y: $navbar-toggler-padding-y,
+  $navbar-toggler-padding-x: $navbar-toggler-padding-x,
+  $navbar-toggler-border-radius: $navbar-toggler-border-radius,
+  $badge-padding-y: $badge-padding-y,
+  $badge-padding-x: $badge-padding-x,
+  $badge-font-weight: $badge-font-weight,
+  $btn-border-radius: $btn-border-radius
+);

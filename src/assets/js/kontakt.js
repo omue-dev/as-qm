@@ -1,0 +1,105 @@
+/**
+ * Kontakt Form Scripts
+ * - Form progress tracking
+ * - Enhanced form field interactions
+ * - Form submission feedback handling
+ */
+
+// Form started timestamp (Bot protection)
+(function () {
+  const formStarted = document.getElementById('formStarted');
+  if (formStarted) {
+    formStarted.value = Math.floor(Date.now() / 1000);
+  }
+})();
+
+// Form progress tracking
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contact-form');
+  const progressBar = document.getElementById('formProgress');
+
+  if (form && progressBar) {
+    const requiredFields = form.querySelectorAll('[required]');
+
+    function updateProgress() {
+      let filled = 0;
+      requiredFields.forEach(field => {
+        if (field.type === 'checkbox') {
+          if (field.checked) filled++;
+        } else {
+          if (field.value.trim() !== '') filled++;
+        }
+      });
+      const progress = (filled / requiredFields.length) * 100;
+      progressBar.style.width = progress + '%';
+    }
+
+    requiredFields.forEach(field => {
+      field.addEventListener('input', updateProgress);
+      field.addEventListener('change', updateProgress);
+    });
+  }
+});
+
+// Enhanced form field interactions
+document.addEventListener('DOMContentLoaded', function() {
+  const formGroups = document.querySelectorAll('.form-group-enhanced');
+
+  formGroups.forEach(group => {
+    const input = group.querySelector('.form-control-enhanced');
+    const indicator = group.querySelector('.form-field-indicator');
+
+    if (input && indicator) {
+      input.addEventListener('focus', () => {
+        group.classList.add('focused');
+      });
+
+      input.addEventListener('blur', () => {
+        group.classList.remove('focused');
+        if (input.value.trim() !== '') {
+          group.classList.add('filled');
+        } else {
+          group.classList.remove('filled');
+        }
+      });
+
+      input.addEventListener('input', () => {
+        if (input.value.trim() !== '') {
+          group.classList.add('filled');
+        } else {
+          group.classList.remove('filled');
+        }
+      });
+    }
+  });
+});
+
+// Handle form submission feedback
+(function () {
+  const params = new URLSearchParams(window.location.search);
+  const status = params.get('status');
+  const code = params.get('code');
+  const success = document.getElementById('formSuccess');
+  const error = document.getElementById('formError');
+  const errorMessage = document.getElementById('errorMessage');
+
+  if (status === 'success' && success) {
+    success.classList.remove('d-none');
+    // Scroll to success message
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  if (status === 'error' && error && errorMessage) {
+    const messages = {
+      missing: 'Bitte füllen Sie alle Pflichtfelder aus und bestätigen Sie die Einwilligung.',
+      email: 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
+      recaptcha: 'Bitte bestätigen Sie das reCAPTCHA.',
+      spam: 'Ihre Anfrage wurde als Spam erkannt. Bitte versuchen Sie es erneut.',
+      send: 'Senden fehlgeschlagen. Bitte versuchen Sie es später erneut.'
+    };
+    errorMessage.textContent = messages[code] || messages.send;
+    error.classList.remove('d-none');
+    // Scroll to error message
+    error.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+})();

@@ -41,7 +41,7 @@
 .hero-media--philosophie {
   background: linear-gradient(
     135deg,
-    rgba(43, 108, 246, 0.15) 0%,
+    rgba(120, 183, 76, 0.15) 0%,
     rgba(27, 47, 74, 0.35) 100%
   );
   backdrop-filter: blur(20px);
@@ -88,7 +88,7 @@
 .philosophie-card-icon {
   width: 4rem;
   height: 4rem;
-  background: linear-gradient(135deg, #2b6cf6 0%, #1f5fe6 100%);
+  background: linear-gradient(135deg, #78B74C 0%, #5A9A2E 100%);
   border-radius: 1rem;
   display: flex;
   align-items: center;
@@ -142,7 +142,7 @@
 .philosophie-pillar-number {
   font-size: 3rem;
   font-weight: 700;
-  color: #2b6cf6;
+  color: #78B74C;
   line-height: 1;
   opacity: 0.85;
 }
@@ -176,11 +176,11 @@
 // ----------------------------------------------------------------------------
 
 .philosophie-visual-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fff9 100%);
   border-radius: 1.75rem;
   padding: $spacer * 3; // 3rem - spacing-5
   @include shadow-token("card");
-  border: 1px solid rgba(43, 108, 246, 0.08);
+  border: 1px solid rgba(120, 183, 76, 0.08);
 }
 
 .philosophie-visual-content {
@@ -199,7 +199,7 @@
   > i {
     width: 3.5rem;
     height: 3.5rem;
-    background: linear-gradient(135deg, #2b6cf6 0%, #1f5fe6 100%);
+    background: linear-gradient(135deg, #78B74C 0%, #5A9A2E 100%);
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -297,7 +297,7 @@
 // ----------------------------------------------------------------------------
 
 .philosophie-quote {
-  background: linear-gradient(135deg, #1b3f74 0%, #0f2847 100%);
+  background: linear-gradient(135deg, #1b5f3f 0%, #0f2847 100%);
   border-radius: 1.5rem;
   padding: $spacer * 3 $spacer * 2.5; // 3rem 2.5rem
   position: relative;
@@ -330,7 +330,7 @@
   display: block;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #58c0ff;
+  color: #A3D977;
   font-style: normal;
   padding-left: $spacer * 3.5; // 3.5rem
 }
@@ -361,7 +361,7 @@
 // Category badge at top of card
 .philosophie-difference-badge {
   display: inline-block;
-  background: linear-gradient(135deg, #2b6cf6 0%, #1f5fe6 100%);
+  background: linear-gradient(135deg, #78B74C 0%, #5A9A2E 100%);
   color: #ffffff;
   font-size: 0.8rem;
   font-weight: 700;

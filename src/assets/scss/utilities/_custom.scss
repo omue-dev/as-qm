@@ -36,3 +36,22 @@
     margin-right: $spacer * 1.5;
   }
 }
+
+// Prevent text/URL overflow on mobile
+main {
+  overflow-x: hidden;
+
+  // Ensure long words/URLs break properly
+  p, li, a {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+}
+
+// Icon-text grid for feature cards (replaces inline styles)
+.icon-grid {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: $spacer * 0.75; // 12px
+  align-items: start;
+}

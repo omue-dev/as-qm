@@ -78,7 +78,7 @@
   // Description text
   .service-card__text,
   p {
-    @include color("color", "muted");
+    @include color("color", "dark");
     margin-bottom: $spacer * 1.5; // 24px
     font-size: 0.95rem;
 

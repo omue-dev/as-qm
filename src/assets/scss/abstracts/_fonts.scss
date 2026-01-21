@@ -1,9 +1,81 @@
 // ============================================================================
-// FONT FACE DECLARATIONS
+// FONT FACE DECLARATIONS - LOKAL GEHOSTET (DSGVO-KONFORM)
 // ============================================================================
-// Google Fonts: Plus Jakarta Sans (headings) and Manrope (body)
+// Plus Jakarta Sans (headings) and Manrope (body)
 // Modern, professional sans-serif pairing for business context
+// Fonts are self-hosted to avoid external requests to Google servers
 // ============================================================================
 
-// Import from Google Fonts with optimal font-display strategy
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap');
+// Plus Jakarta Sans - Headings Font
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/Plus_Jakarta_Sans/plus-jakarta-sans-v12-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/Plus_Jakarta_Sans/plus-jakarta-sans-v12-latin-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/Plus_Jakarta_Sans/plus-jakarta-sans-v12-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/Plus_Jakarta_Sans/plus-jakarta-sans-v12-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../fonts/Plus_Jakarta_Sans/plus-jakarta-sans-v12-latin-800.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Manrope - Body Font
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope/manrope-v20-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope/manrope-v20-latin-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope/manrope-v20-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope/manrope-v20-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

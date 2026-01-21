@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
+    <meta name="description" content="Datenschutzerklärung der A&S QM Beratung. Informationen zur Datenverarbeitung gemäß DSGVO.">
+    <meta name="robots" content="noindex, follow">
+    <title>Datenschutzerklärung | A&S QM Beratung</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body>
+    <nav class="navbar-liquid" role="navigation" aria-label="Main Navigation">
+  <!-- Desktop: Floating Left Rail -->
+  <div class="nav-rail">
+    <!-- Logo/Brand with breathing animation -->
+    <a href="index.html" class="nav-brand" aria-label="A&S Audit & Sicherheit - Home">
+      <div class="brand-glow"></div>
+      <img src="assets/img/favicon.png" alt="A&S Logo" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-line">AUDIT &</span>
+        <span class="brand-line">SICHERHEIT</span>
+        <span class="brand-line">STRAUCHEN</span>
+      </div>
+    </a>
+
+    <!-- Liquid Active Indicator (morphs between active items) -->
+    <div class="liquid-indicator" aria-hidden="true"></div>
+
+    <!-- Navigation Items -->
+    <ul class="nav-items" role="list">
+      <li class="nav-item" data-nav="home">
+        <a href="index.html" class="nav-link" aria-label="Startseite">
+          <div class="nav-icon-wrapper">
+            <i class="fas fa-home nav-icon" aria-hidden="true"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <span class="nav-label">Start</span>
+        </a>
+      </li>
+      <li class="nav-item" data-nav="philosophy">
+        <a href="philosophie.html" class="nav-link" aria-label="Philosophie">
+          <div class="nav-icon-wrapper">
+            <i class="fas fa-lightbulb nav-icon" aria-hidden="true"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <span class="nav-label">Philosophie</span>
+        </a>
+      </li>
+      <li class="nav-item" data-nav="services">
+        <a href="leistungen.html" class="nav-link" aria-label="Leistungen">
+          <div class="nav-icon-wrapper">
+            <i class="fas fa-tasks nav-icon" aria-hidden="true"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <span class="nav-label">Leistungen</span>
+        </a>
+      </li>
+      <li class="nav-item" data-nav="about">
+        <a href="ueber-mich.html" class="nav-link" aria-label="Über mich">
+          <div class="nav-icon-wrapper">
+            <i class="fas fa-user nav-icon" aria-hidden="true"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <span class="nav-label">Über mich</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Contact CTA with pulse animation -->
+    <a href="kontakt.html#contact-form" class="nav-contact" aria-label="Kontakt">
+      <div class="contact-glow"></div>
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+      <span>Kontakt</span>
+    </a>
+
+    <!-- Footer Links (Impressum, Datenschutz) -->
+    <div class="nav-footer">
+      <a href="impressum.html" class="footer-link">Impressum</a>
+      <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+    </div>
+  </div>
+
+  <!-- Mobile: Floating Dock-Style Bottom Nav -->
+  <div class="nav-dock">
+    <div class="dock-container">
+      <div class="dock-bg"></div>
+      <div class="dock-items">
+        <a href="index.html" class="dock-item">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-home"></i>
+          </div>
+          <span class="dock-label">Start</span>
+        </a>
+        <a href="philosophie.html" class="dock-item">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <span class="dock-label">Philosophie</span>
+        </a>
+        <a href="leistungen.html" class="dock-item">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <span class="dock-label">Leistungen</span>
+        </a>
+        <a href="ueber-mich.html" class="dock-item">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-user"></i>
+          </div>
+          <span class="dock-label">Über mich</span>
+        </a>
+        <a href="kontakt.html#contact-form" class="dock-item dock-item--primary">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <span class="dock-label">Kontakt</span>
+        </a>
+        <button class="dock-item dock-item--menu" id="dock-menu-toggle" aria-label="Menü öffnen">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-bars"></i>
+          </div>
+          <span class="dock-label">Menü</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="nav-overlay" id="nav-overlay">
+    <div class="overlay-backdrop" id="overlay-backdrop"></div>
+    <div class="overlay-content">
+      <div class="overlay-header">
+        <h3>Weitere Links</h3>
+        <button class="overlay-close" id="overlay-close" aria-label="Menü schließen">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="overlay-links">
+        <a href="impressum.html" class="overlay-link">
+          <i class="fas fa-info-circle"></i>
+          <span>Impressum</span>
+        </a>
+        <a href="datenschutz.html" class="overlay-link">
+          <i class="fas fa-shield-alt"></i>
+          <span>Datenschutz</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+</nav>
+
+
+    <main class="py-section">
+      <div class="container">
+        <div class="row row-spacious justify-content-center">
+          <div class="col-lg-8">
+            <h1 class="text-strong mb-5">
+              <strong>Datenschutz</strong>
+            </h1>
+
+            <section class="mb-5">
+              <h2 class="h4 mb-3">Allgemeiner Hinweis und Pflichtinformationen</h2>
+              <h3 class="h5 mb-3">Benennung der verantwortlichen Stelle</h3>
+              <p class="mb-4">
+                Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:
+              </p>
+              <p class="mb-4">
+                Andreas Strauchen<br>
+                A&S QM Beratung<br>
+                Im Ländchen 11<br>
+                41844 Wegberg
+              </p>
+              <p class="mb-0">
+                Die verantwortliche Stelle entscheidet allein oder gemeinsam mit anderen über die
+                Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z.B. Namen,
+                Kontaktdaten o. Ä.).
+              </p>
+            </section>
+
+            <section class="mb-5">
+              <h2 class="h4 mb-3">Widerruf Ihrer Einwilligung zur Datenverarbeitung</h2>
+              <p class="mb-0">
+                Nur mit Ihrer ausdrücklichen Einwilligung sind einige Vorgänge der Datenverarbeitung
+                möglich. Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich.
+                Für den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der
+                bis zum Widerruf erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
+              </p>
+            </section>
+
+            <section class="mb-5">
+              <h2 class="h4 mb-3">Recht auf Beschwerde bei der zuständigen Aufsichtsbehörde</h2>
+              <p class="mb-0">
+                Als Betroffener steht Ihnen im Falle eines datenschutzrechtlichen Verstoßes ein
+                Beschwerderecht bei der zuständigen Aufsichtsbehörde zu. Zuständige Aufsichtsbehörde
+                bezüglich datenschutzrechtlicher Fragen ist der Landesdatenschutzbeauftragte des
+                Bundeslandes, in dem sich der Sitz unseres Unternehmens befindet. Der folgende Link
+                stellt eine Liste der Datenschutzbeauftragten sowie deren Kontaktdaten bereit:
+                <a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html" target="_blank" rel="noopener">
+                  www.bfdi.bund.de
+                </a>.
+              </p>
+            </section>
+
+            <section class="mb-5">
+              <h2 class="h4 mb-3">Recht auf Datenübertragbarkeit</h2>
+              <p class="mb-0">
+                Ihnen steht das Recht zu, Daten, die wir auf Grundlage Ihrer Einwilligung oder in
+                Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an Dritte aushändigen
+                zu lassen. Die Bereitstellung erfolgt in einem maschinenlesbaren Format. Sofern Sie
+                die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt
+                dies nur, soweit es technisch machbar ist.
+              </p>
+            </section>
+
+            <section class="mb-5">
+              <h2 class="h4 mb-3">Recht auf Auskunft, Berichtigung, Sperrung, Löschung</h2>
+              <p class="mb-0">
+                Sie haben jederzeit im Rahmen der geltenden gesetzlichen Bestimmungen das Recht auf
+                unentgeltliche Auskunft über Ihre gespeicherten personenbezogenen Daten, Herkunft der
+                Daten, deren Empfänger und den Zweck der Datenverarbeitung und ggf. ein Recht auf
+                Berichtigung, Sperrung oder Löschung dieser Daten. Diesbezüglich und auch zu weiteren
+                Fragen zum Thema personenbezogene Daten können Sie sich jederzeit über die im
+                <a href="impressum.html">Impressum</a> aufgeführten Kontaktmöglichkeiten an uns wenden.
+              </p>
+            </section>
+
+            <section class="mb-5">
+              <h2 class="h4 mb-3">SSL- bzw. TLS-Verschlüsselung</h2>
+              <p class="mb-0">
+                Aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, die Sie
+                an uns als Seitenbetreiber senden, nutzt unsere Website eine SSL- bzw. TLS-Verschlüsselung.
+                Damit sind Daten, die Sie über diese Website übermitteln, für Dritte nicht mitlesbar.
+                Sie erkennen eine verschlüsselte Verbindung an der „https://" Adresszeile Ihres Browsers
+                und am Schloss-Symbol in der Browserzeile.
+              </p>
+            </section>
+
+            <section class="mb-5">
+              <h2 class="h4 mb-3">Server-Log-Dateien</h2>
+              <p class="mb-4">
+                In Server-Log-Dateien erhebt und speichert der Provider der Website automatisch
+                Informationen, die Ihr Browser automatisch an uns übermittelt. Dies sind:
+              </p>
+              <ul class="mb-4">
+                <li>Besuchte Seite auf unserer Domain</li>
+                <li>Datum und Uhrzeit der Serveranfrage</li>
+                <li>Browsertyp und Browserversion</li>
+                <li>Verwendetes Betriebssystem</li>
+                <li>Referrer URL</li>
+                <li>Hostname des zugreifenden Rechners</li>
+                <li>IP-Adresse</li>
+              </ul>
+              <p class="mb-0">
+                Es findet keine Zusammenführung dieser Daten mit anderen Datenquellen statt. Grundlage
+                der Datenverarbeitung bildet Art. 6 Abs. 1 lit. b DSGVO, der die Verarbeitung von Daten
+                zur Erfüllung eines Vertrags oder vorvertraglicher Maßnahmen gestattet.
+              </p>
+            </section>
+
+            <section class="mb-5">
+              <h2 class="h4 mb-3">Kontaktformular</h2>
+              <p class="mb-4">
+                Per Kontaktformular übermittelte Daten werden einschließlich Ihrer Kontaktdaten
+                gespeichert, um Ihre Anfrage bearbeiten zu können oder um für Anschlussfragen
+                bereitzustehen. Eine Weitergabe dieser Daten findet ohne Ihre Einwilligung nicht statt.
+              </p>
+              <p class="mb-4">
+                Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt ausschließlich
+                auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Ein Widerruf Ihrer
+                bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine
+                formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bis zum Widerruf erfolgten
+                Datenverarbeitungsvorgänge bleibt vom Widerruf unberührt.
+              </p>
+              <p class="mb-0">
+                Über das Kontaktformular übermittelte Daten verbleiben bei uns, bis Sie uns zur
+                Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder keine
+                Notwendigkeit der Datenspeicherung mehr besteht. Zwingende gesetzliche Bestimmungen –
+                insbesondere Aufbewahrungsfristen – bleiben unberührt.
+              </p>
+            </section>
+
+            <section class="mb-5">
+              <h2 class="h4 mb-3">Cookies</h2>
+              <p class="mb-4">
+                Unsere Website verwendet Cookies. Das sind kleine Textdateien, die Ihr Webbrowser auf
+                Ihrem Endgerät speichert. Cookies helfen uns dabei, unser Angebot nutzerfreundlicher,
+                effektiver und sicherer zu machen.
+              </p>
+              <p class="mb-4">
+                Einige Cookies sind "Session-Cookies." Solche Cookies werden nach Ende Ihrer
+                Browser-Sitzung von selbst gelöscht. Hingegen bleiben andere Cookies auf Ihrem Endgerät
+                bestehen, bis Sie diese selbst löschen. Solche Cookies helfen uns, Sie bei Rückkehr auf
+                unserer Website wiederzuerkennen.
+              </p>
+              <p class="mb-4">
+                Mit einem modernen Webbrowser können Sie das Setzen von Cookies überwachen, einschränken
+                oder unterbinden. Viele Webbrowser lassen sich so konfigurieren, dass Cookies mit dem
+                Schließen des Programms von selbst gelöscht werden. Die Deaktivierung von Cookies kann
+                eine eingeschränkte Funktionalität unserer Website zur Folge haben.
+              </p>
+              <p class="mb-0">
+                Das Setzen von Cookies, die zur Ausübung elektronischer Kommunikationsvorgänge oder der
+                Bereitstellung bestimmter, von Ihnen erwünschter Funktionen (z.B. Warenkorb) notwendig
+                sind, erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Als Betreiber dieser Website
+                haben wir ein berechtigtes Interesse an der Speicherung von Cookies zur technisch
+                fehlerfreien und reibungslosen Bereitstellung unserer Dienste. Sofern die Setzung anderer
+                Cookies (z.B. für Analyse-Funktionen) erfolgt, werden diese in dieser Datenschutzerklärung
+                separat behandelt.
+              </p>
+            </section>
+
+            <section class="mb-5">
+              <h2 class="h4 mb-3">Lokal eingebundene Schriften</h2>
+              <p class="mb-0">
+                Diese Website verwendet lokal gehostete Schriftarten. Die Schriftdateien werden
+                direkt von unserem Server geladen. Es erfolgt keine Verbindung zu externen Servern
+                (wie z.B. Google Fonts) beim Laden der Schriften. Ihre IP-Adresse wird somit nicht
+                an Dritte übermittelt.
+              </p>
+            </section>
+
+            <p class="small text-muted">
+              Quelle: Datenschutz-Konfigurator von
+              <a href="https://www.mein-datenschutzbeauftragter.de" target="_blank" rel="noopener">mein-datenschutzbeauftragter.de</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-qm py-section" id="contact">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "A&S QM Beratung - Andreas Strauchen",
+    "description": "Qualitätsmanagement und Unternehmensberatung für die Lebensmittelindustrie. HACCP Beratung, Lebensmittelaudits, IFS Beratung.",
+    "url": "https://as-qm.de",
+    "telephone": "+49-2434-3088750",
+    "email": "info@as-qm.de",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "DE"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Germany"
+    },
+    "serviceType": ["Qualitätsmanagement", "HACCP Beratung", "Lebensmittelaudits", "IFS Beratung", "QM Schulungen"]
+  }
+  </script>
+  <div class="container footer-container-spacious">
+    <div class="row row-spacious g-5">
+      <div class="col-lg-5">
+        <div class="footer-eyebrow">Andreas Strauchen</div>
+        <h2 class="footer-headline">Audit &amp; Sicherheit</h2>
+        <div class="footer-subheadline">Qualitätsmanagement &amp; Unternehmensberatung</div>
+        <p class="footer-copy">
+          Ich sehe mich nicht nur als externer Unternehmensberater und Auditor, der Sie kurzfristig unterstützt.
+        </p>
+        <p class="footer-copy">
+          Ich biete vor allem eine vertrauensvolle und nachhaltige Partnerschaft, in der wir gemeinsam in die Zukunft
+          gehen und die Sicherheit Ihrer Produkte gewährleisten.
+        </p>
+        <a class="btn btn-light btn-lg mt-3 px-4" href="kontakt.html">Kontaktieren Sie mich</a>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="footer-portrait-wrap">
+          <img class="img-fluid footer-portrait" src="assets/img/andreas-strauchen-inhaber-as-qm-footer-grafik.webp" alt="Andreas Strauchen" loading="lazy">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-panel">
+          <h5 class="mb-3">Kontakt</h5>
+          <ul class="list-unstyled footer-contact mb-0">
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>02434 / 30 88 750</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              <span>0152 / 01 76 67 87</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>info@as-qm.de</span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links mt-4">
+          <a href="kontakt.html">Kontakt</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

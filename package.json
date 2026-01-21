@@ -10,7 +10,8 @@
     "dev:site": "concurrently \"sass --watch src/assets/scss/main.scss:dist/assets/css/main.css\" \"node scripts/sync-site.js\" \"node scripts/dev-site.js\"",
     "serve:site": "http-server dist -c-1",
     "build": "sass wireframe/sass/main.scss wireframe/css/main.css",
-    "build:site": "sass src/assets/scss/main.scss dist/assets/css/main.css && node scripts/build-site.js && mkdir -p dist/assets/webfonts dist/assets/fonts/Roboto_Condensed dist/assets/fonts/DM_Serif_Text && cp -r node_modules/@fortawesome/fontawesome-free/webfonts/* dist/assets/webfonts/ && cp src/assets/fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf src/assets/fonts/Roboto_Condensed/RobotoCondensed-Italic-VariableFont_wght.ttf dist/assets/fonts/Roboto_Condensed/ && cp src/assets/fonts/DM_Serif_Text/DMSerifText-Regular.ttf src/assets/fonts/DM_Serif_Text/DMSerifText-Italic.ttf dist/assets/fonts/DM_Serif_Text/",
+    "clean:dist": "rm -rf dist/*.tmp.* dist/*:Zone.Identifier dist/**/*.tmp.* dist/**/*:Zone.Identifier",
+    "build:site": "sass --style=compressed --no-source-map src/assets/scss/main.scss dist/assets/css/main.css && node scripts/build-site.js && mkdir -p dist/assets/webfonts dist/assets/fonts/Plus_Jakarta_Sans dist/assets/fonts/Manrope && cp -r node_modules/@fortawesome/fontawesome-free/webfonts/* dist/assets/webfonts/ && cp src/assets/fonts/Plus_Jakarta_Sans/*.woff2 dist/assets/fonts/Plus_Jakarta_Sans/ && cp src/assets/fonts/Manrope/*.woff2 dist/assets/fonts/Manrope/ && npm run clean:dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
