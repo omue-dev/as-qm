@@ -70,17 +70,16 @@ function initNavigation() {
 
     const activeLink = document.querySelector('.nav-link.active');
     if (activeLink) {
-      const navItem = activeLink.closest('.nav-item');
-      if (navItem) {
-        const rect = navItem.getBoundingClientRect();
-        const navRail = document.querySelector('.nav-rail');
-        const railRect = navRail?.getBoundingClientRect();
+      const iconWrapper = activeLink.querySelector('.nav-icon-wrapper');
+      const navRail = document.querySelector('.nav-rail');
+      const railRect = navRail?.getBoundingClientRect();
 
-        if (railRect) {
-          const offsetY = rect.top - railRect.top + (rect.height / 2) - 25; // Center the indicator
-          liquidIndicator.style.transform = `translateX(-50px) translateY(${offsetY}px)`;
-          liquidIndicator.classList.add('active');
-        }
+      if (iconWrapper && railRect) {
+        const iconRect = iconWrapper.getBoundingClientRect();
+        // Center the 50px indicator on the icon (25px = half of indicator height)
+        const offsetY = iconRect.top - railRect.top + (iconRect.height / 2) - 40;
+        liquidIndicator.style.transform = `translateX(-50px) translateY(${offsetY}px)`;
+        liquidIndicator.classList.add('active');
       }
     }
   }

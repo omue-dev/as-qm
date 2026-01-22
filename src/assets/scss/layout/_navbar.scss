@@ -267,7 +267,6 @@
     .nav-icon {
       color: var(--nav-active);
       filter: drop-shadow(0 0 12px var(--nav-glow-bright));
-      animation: pulse-glow 3s ease-in-out infinite;
     }
 
     .icon-glow {
@@ -397,7 +396,7 @@
 }
 
 .footer-link {
-  font-size: 0.55rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.5);
   text-decoration: none;
@@ -601,8 +600,7 @@
     transition: all 0.3s;
   }
 
-  .dock-item:hover &,
-  .dock-item.active & {
+  .dock-item:hover & {
     transform: translateY(-4px) scale(1.1);
 
     &::before {
@@ -610,6 +608,13 @@
       box-shadow: 0 6px 12px rgba(120, 183, 76, 0.3);
     }
 
+    i {
+      color: var(--nav-active);
+      filter: drop-shadow(0 0 8px var(--nav-glow));
+    }
+  }
+
+  .dock-item.active & {
     i {
       color: var(--nav-active);
       filter: drop-shadow(0 0 8px var(--nav-glow));
@@ -796,6 +801,8 @@
     transform: translateX(4px) scale(0.98);
   }
 }
+
+
 
 // ============================================================================
 // BODY SPACING
