@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/favicon.png">
+    <meta name="description" content="Es ist ein technischer Fehler aufgetreten.">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Technischer Fehler | A&S QM Beratung</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+  </head>
+  <body class="navbar-liquid">
+    <nav class="navbar-liquid" role="navigation" aria-label="Main Navigation">
+  <!-- Desktop: Floating Left Rail -->
+  <div class="nav-rail">
+    <!-- Logo/Brand with breathing animation -->
+    <a href="index.html" class="nav-brand" aria-label="A&S Audit & Sicherheit - Home">
+      <div class="brand-glow"></div>
+      <img src="assets/img/favicon.png" alt="A&S Logo" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-line">AUDIT &</span>
+        <span class="brand-line">SICHERHEIT</span>
+        <span class="brand-line">STRAUCHEN</span>
+      </div>
+    </a>
+
+    <!-- Liquid Active Indicator (morphs between active items) -->
+    <div class="liquid-indicator" aria-hidden="true"></div>
+
+    <!-- Navigation Items -->
+    <ul class="nav-items" role="list">
+      <li class="nav-item" data-nav="home">
+        <a href="index.html" class="nav-link" aria-label="Startseite">
+          <div class="nav-icon-wrapper">
+            <i class="fas fa-home nav-icon" aria-hidden="true"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <span class="nav-label">Start</span>
+        </a>
+      </li>
+      <li class="nav-item" data-nav="philosophy">
+        <a href="philosophie.html" class="nav-link" aria-label="Philosophie">
+          <div class="nav-icon-wrapper">
+            <i class="fas fa-lightbulb nav-icon" aria-hidden="true"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <span class="nav-label">Philosophie</span>
+        </a>
+      </li>
+      <li class="nav-item" data-nav="services">
+        <a href="leistungen.html" class="nav-link" aria-label="Leistungen">
+          <div class="nav-icon-wrapper">
+            <i class="fas fa-tasks nav-icon" aria-hidden="true"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <span class="nav-label">Leistungen</span>
+        </a>
+      </li>
+      <li class="nav-item" data-nav="about">
+        <a href="ueber-mich.html" class="nav-link" aria-label="Über mich">
+          <div class="nav-icon-wrapper">
+            <i class="fas fa-user nav-icon" aria-hidden="true"></i>
+            <div class="icon-glow"></div>
+          </div>
+          <span class="nav-label">Über mich</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- Contact CTA with pulse animation -->
+    <a href="kontakt.html#contact-form" class="nav-contact" aria-label="Kontakt">
+      <div class="contact-glow"></div>
+      <i class="fas fa-envelope" aria-hidden="true"></i>
+      <span>Kontakt</span>
+    </a>
+
+    <!-- Footer Links (Impressum, Datenschutz) -->
+    <div class="nav-footer">
+      <a href="impressum.html" class="footer-link">Impressum</a>
+      <a href="datenschutz.html" class="footer-link">Datenschutz</a>
+    </div>
+  </div>
+
+  <!-- Mobile: Floating Dock-Style Bottom Nav -->
+  <div class="nav-dock">
+    <div class="dock-container">
+      <div class="dock-bg"></div>
+      <div class="dock-items">
+        <a href="index.html" class="dock-item">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-home"></i>
+          </div>
+          <span class="dock-label">Start</span>
+        </a>
+        <a href="philosophie.html" class="dock-item">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <span class="dock-label">Philosophie</span>
+        </a>
+        <a href="leistungen.html" class="dock-item">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <span class="dock-label">Leistungen</span>
+        </a>
+        <a href="ueber-mich.html" class="dock-item">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-user"></i>
+          </div>
+          <span class="dock-label">Über mich</span>
+        </a>
+        <a href="kontakt.html#contact-form" class="dock-item dock-item--primary">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <span class="dock-label">Kontakt</span>
+        </a>
+        <button class="dock-item dock-item--menu" id="dock-menu-toggle" aria-label="Menü öffnen">
+          <div class="dock-icon-wrapper">
+            <i class="fas fa-bars"></i>
+          </div>
+          <span class="dock-label">Menü</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="nav-overlay" id="nav-overlay">
+    <div class="overlay-backdrop" id="overlay-backdrop"></div>
+    <div class="overlay-content">
+      <div class="overlay-header">
+        <h3>Weitere Links</h3>
+        <button class="overlay-close" id="overlay-close" aria-label="Menü schließen">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="overlay-links">
+        <a href="impressum.html" class="overlay-link">
+          <i class="fas fa-info-circle"></i>
+          <span>Impressum</span>
+        </a>
+        <a href="datenschutz.html" class="overlay-link">
+          <i class="fas fa-shield-alt"></i>
+          <span>Datenschutz</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+</nav>
+
+
+    <main class="error-page">
+      <div class="error-content">
+        <div class="error-code">500</div>
+        <h1 class="error-title">Technischer Fehler</h1>
+        <p class="error-text">
+          Entschuldigung, es ist ein Problem aufgetreten.
+          Bitte versuchen Sie es spaeter erneut oder kontaktieren Sie mich direkt.
+        </p>
+        <div class="error-actions">
+          <a href="index.html" class="error-btn error-btn--primary">
+            <i class="fa-solid fa-house"></i>
+            Zur Startseite
+          </a>
+          <a href="kontakt.html" class="error-btn error-btn--secondary">
+            <i class="fa-solid fa-envelope"></i>
+            Kontakt aufnehmen
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-qm py-section" id="contact">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "A&S QM Beratung - Andreas Strauchen",
+    "description": "Qualitätsmanagement und Unternehmensberatung für die Lebensmittelindustrie. HACCP Beratung, Lebensmittelaudits, IFS Beratung.",
+    "url": "https://as-qm.de",
+    "telephone": "+49-2434-3088750",
+    "email": "info@as-qm.de",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "DE"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Germany"
+    },
+    "serviceType": ["Qualitätsmanagement", "HACCP Beratung", "Lebensmittelaudits", "IFS Beratung", "QM Schulungen"]
+  }
+  </script>
+  <div class="container footer-container-spacious">
+    <div class="row row-spacious g-5">
+      <div class="col-lg-5">
+        <div class="footer-eyebrow">Andreas Strauchen</div>
+        <h2 class="footer-headline">Audit &amp; Sicherheit</h2>
+        <div class="footer-subheadline">Qualitätsmanagement &amp; Unternehmensberatung</div>
+        <p class="footer-copy">
+          Ich sehe mich nicht nur als externer Unternehmensberater und Auditor, der Sie kurzfristig unterstützt.
+        </p>
+        <p class="footer-copy">
+          Ich biete vor allem eine vertrauensvolle und nachhaltige Partnerschaft, in der wir gemeinsam in die Zukunft
+          gehen und die Sicherheit Ihrer Produkte gewährleisten.
+        </p>
+        <a class="btn btn-light btn-lg mt-3 px-4" href="kontakt.html">Kontaktieren Sie mich</a>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="footer-portrait-wrap">
+          <img class="img-fluid footer-portrait" src="assets/img/andreas-strauchen-inhaber-as-qm-footer-grafik.webp" alt="Andreas Strauchen" loading="lazy">
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-panel">
+          <h5 class="mb-3">Kontakt</h5>
+          <ul class="list-unstyled footer-contact mb-0">
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>02434 / 30 88 750</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              <span>0152 / 01 76 67 87</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>info@as-qm.de</span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links mt-4">
+          <a href="kontakt.html">Kontakt</a>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

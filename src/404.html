@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <link rel="apple-touch-icon" href="assets/img/favicon.png" />
+    <meta name="description" content="Die angeforderte Seite wurde nicht gefunden." />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Seite nicht gefunden | A&S QM Beratung</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="navbar-liquid">
+    <include src="partials/navbar.html"></include>
+
+    <main class="error-page">
+      <div class="error-content">
+        <div class="error-code">404</div>
+        <h1 class="error-title">Seite nicht gefunden</h1>
+        <p class="error-text">
+          Die angeforderte Seite existiert nicht oder wurde verschoben.
+          Nutzen Sie die Navigation oder kehren Sie zur Startseite zurueck.
+        </p>
+        <div class="error-actions">
+          <a href="index.html" class="error-btn error-btn--primary">
+            <i class="fa-solid fa-house"></i>
+            Zur Startseite
+          </a>
+          <a href="kontakt.html" class="error-btn error-btn--secondary">
+            <i class="fa-solid fa-envelope"></i>
+            Kontakt aufnehmen
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <include src="partials/footer.html"></include>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
